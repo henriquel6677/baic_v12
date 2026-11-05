@@ -1,0 +1,2813 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BAIC V12 | ARCFOX T1 — Um Novo Conceito de Mobilidade</title>
+  <meta name="description" content="Conheça o novo ARCFOX T1 na BAIC V12. Um novo conceito de mobilidade: compacto, espaçoso e tecnológico. Agende seu test drive." />
+
+  <!-- Google Fonts: Montserrat (Geometric Tech Display) + Inter (Clean UI Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://inconnectsites.s3.us-east-1.amazonaws.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css?v=26" />
+  <script>
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    if (window.location.hash) {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  </script>
+</head>
+<body class="is-intro-locked">
+
+  <!-- ==========================================
+       HEADER / NAVBAR (100% Transparent, adapts on white section)
+       ========================================== -->
+  <header class="navbar" id="mainNavbar">
+    <div class="navbar__container">
+      <!-- Left: Company Logo -->
+      <a href="#hero" class="navbar__brand" aria-label="BAIC V12 Home">
+        <img src="assets/logo-baic.png" alt="BAIC | V12" class="navbar__logo" />
+      </a>
+
+      <!-- Center: Car Name in Vibrant Electric Blue -->
+      <div class="navbar__center">
+        <a href="#hero" class="navbar__model">
+          ARCFOX <span>T1</span>
+        </a>
+      </div>
+
+      <!-- Right: Framer-style Pill Navigation Topics (Blue Gradient + Black Text on Hover) -->
+      <nav class="navbar__nav" aria-label="Navegação Principal">
+        <ul class="navbar__links">
+          <li><a href="#cores" class="navbar__pill">Cores & 360°</a></li>
+          <li><a href="#experiencia" class="navbar__pill">Sobre o Carro</a></li>
+          <li><a href="#faq" class="navbar__pill">Dúvidas</a></li>
+          <li><a href="#agendamento" class="navbar__pill">Agendar</a></li>
+        </ul>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="navbar__mobile-toggle" id="mobileMenuBtn" aria-label="Abrir menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer__content">
+      <div class="mobile-drawer__model">ARCFOX <span>T1</span></div>
+      <ul class="mobile-drawer__links">
+        <li><a href="#cores" class="mobile-drawer__link">Cores & 360°</a></li>
+        <li><a href="#experiencia" class="mobile-drawer__link">Sobre o Carro</a></li>
+        <li><a href="#faq" class="mobile-drawer__link">Dúvidas</a></li>
+        <li><a href="#agendamento" class="mobile-drawer__link">Agendar</a></li>
+      </ul>
+      <button type="button" class="btn-framer btn-framer--full" data-open-modal>
+        <span class="btn-framer__label">Agendar Test Drive</span>
+        <span class="btn-framer__badge" aria-hidden="true">
+          <svg class="btn-framer__arrow btn-framer__arrow--primary" viewBox="0 0 16 16" fill="none">
+            <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <svg class="btn-framer__arrow btn-framer__arrow--secondary" viewBox="0 0 16 16" fill="none">
+            <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==========================================
+         SECTION 1: STICKY HERO WRAPPER (Scales & Blurs as Section 2 Rises Over It)
+         ========================================== -->
+    <div class="hero-scroll-stage" id="heroScrollStage">
+      <section class="hero" id="hero">
+        <!-- Video Background Layer (Enhanced HQ + Lossless Original Stream) -->
+        <div class="hero__video-wrapper">
+          <video
+            id="heroVideo"
+            class="hero__video"
+            autoplay
+            muted
+            playsinline
+            loop
+            preload="auto"
+            poster="assets/hero-poster.jpg"
+          >
+            <source src="assets/hero-t1-hq.mp4" type="video/mp4" />
+            <source src="assets/hero-t1-lossless.mp4" type="video/mp4" />
+            Seu navegador não suporta vídeos HTML5.
+          </video>
+
+          <!-- Subtle Monochrome Bottom-Left Cushion -->
+          <div class="hero__vignette" aria-hidden="true"></div>
+        </div>
+
+        <!-- Main Hero Interface Layer (Bottom-Left Positioned) -->
+        <div class="hero__container">
+          <div class="hero__content" id="heroContent">
+
+            <!-- 3D STACKED VERTICAL CARD CAROUSEL (Above Bottom-Left Info) -->
+            <div class="card-carousel reveal-item" id="detailCarousel" style="--reveal-order: 1;" aria-label="Galeria de detalhes do ARCFOX T1">
+              <!-- Left Minimal Arrow -->
+              <button type="button" class="card-carousel__nav card-carousel__nav--prev" id="carouselPrev" aria-label="Foto anterior">
+                <svg viewBox="0 0 16 16" fill="none">
+                  <path d="M10 12.5L5.5 8L10 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+
+              <!-- Stacked Cards Stage (Synced with the 3 Bento Cards of #duvidas) -->
+              <div class="card-carousel__stage">
+                <article class="card-carousel__item" data-index="0">
+                  <img src="assets/gallery/gal-08.jpg" alt="Central Multimídia 15,6 polegadas e Painel Digital ARCFOX T1" draggable="false" />
+                  <span class="card-carousel__caption">Central Multimídia 15,6"</span>
+                </article>
+
+                <article class="card-carousel__item" data-index="1">
+                  <img src="assets/gallery/gal-01.jpg" alt="Amplo Espaço Interno com 2.770 mm de Entre-Eixos ARCFOX T1" draggable="false" />
+                  <span class="card-carousel__caption">2.770 mm Entre-Eixos</span>
+                </article>
+
+                <article class="card-carousel__item" data-index="2">
+                  <img src="assets/gallery/gal-11.jpg" alt="Performance Elétrica e Recarga Rápida em 16 min ARCFOX T1" draggable="false" />
+                  <span class="card-carousel__caption">Recarga em 16 min</span>
+                </article>
+              </div>
+
+              <!-- Right Minimal Arrow -->
+              <button type="button" class="card-carousel__nav card-carousel__nav--next" id="carouselNext" aria-label="Próxima foto">
+                <svg viewBox="0 0 16 16" fill="none">
+                  <path d="M6 3.5L10.5 8L6 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Editorial Headline Mixing Light & Bold Weights + Tactile Glass Pill -->
+            <div class="hero__header reveal-item" style="--reveal-order: 2;">
+              <div class="hero__meta">
+                <span class="hero__slashes" aria-hidden="true">///</span>
+                <span class="hero__glass-pill">
+                  <span class="hero__glass-pill-text">100% Elétrico</span>
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                <span class="hero__meta-label">BAIC V12</span>
+              </div>
+
+              <h1 class="hero__title">
+                <span class="hero__title-light">ARCFOX</span>
+                <span class="hero__title-bold">T1</span>
+              </h1>
+            </div>
+
+            <!-- Editorial Subheadline with Hairline Divider -->
+            <p class="hero__subtitle reveal-item" style="--reveal-order: 3;">
+              Um novo conceito de mobilidade <span class="hero__inline-line" aria-hidden="true"></span>
+              <strong>compacto, espaçoso e tecnológico.</strong>
+            </p>
+
+            <!-- 21st.dev / Framer Style Action Row -->
+            <div class="hero__actions reveal-item" style="--reveal-order: 4;">
+              <!-- Primary Framer Pill CTA (Hover: Blue Gradient + Black Text) -->
+              <button type="button" class="btn-framer" id="heroCtaBtn" data-open-modal>
+                <span class="btn-framer__label">Agendar Test Drive</span>
+                <span class="btn-framer__badge" aria-hidden="true">
+                  <svg class="btn-framer__arrow btn-framer__arrow--primary" viewBox="0 0 16 16" fill="none">
+                    <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <svg class="btn-framer__arrow btn-framer__arrow--secondary" viewBox="0 0 16 16" fill="none">
+                    <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </button>
+
+              <!-- Secondary Minimal Glass Pill (Scrolls smoothly to 360° Colors Section) -->
+              <a href="#cores" class="btn-glass">
+                <span>Explorar em 360°</span>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Bottom-Right Minimal Controls (Replay Intro & Timeline) -->
+          <div class="hero__hud reveal-item" style="--reveal-order: 5;">
+            <button type="button" class="hero__hud-btn" id="replayIntroBtn" title="Repetir animação de entrada">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 3v5h5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Rever intro</span>
+            </button>
+
+            <div class="hero__progress" aria-label="Progresso do vídeo">
+              <div class="hero__progress-bar" id="videoProgressBar"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ==========================================
+         SECTION 2: WHITE SHEET — INTERACTIVE 360° COLOR STUDIO
+         Rises over the blurring/scaling Hero section on scroll
+         ========================================== -->
+    <section class="color-studio" id="cores" aria-labelledby="studioTitle">
+      <!-- Top Subtle Handle / Sheet Indicator -->
+      <div class="color-studio__sheet-bar" aria-hidden="true"></div>
+
+      <div class="color-studio__container" id="sobre">
+        <!-- Studio Editorial Header -->
+        <div class="color-studio__header scroll-reveal">
+          <div class="color-studio__eyebrow">
+            <span class="color-studio__slashes">///</span>
+            <span class="color-studio__tag">ESTÚDIO INTERATIVO 360°</span>
+          </div>
+
+          <h2 class="color-studio__title" id="studioTitle">
+            Design minimalista em <span class="color-studio__title-accent">todos os ângulos.</span>
+          </h2>
+
+          <p class="color-studio__subtitle">
+            Arraste o veículo para girar em 360° e alterne entre as cores oficiais do novo <strong>ARCFOX T1 BEV</strong>.
+          </p>
+        </div>
+
+        <!-- Main Interactive 360° Stage -->
+        <div class="giro-viewer scroll-reveal" id="pdpGiro">
+          <!-- Background Giant Watermark Model Name (Changes subtly with color) -->
+          <div class="giro-viewer__watermark" id="giroWatermark" aria-hidden="true">ARCFOX T1</div>
+
+          <!-- Interactive Drag Canvas / Stage -->
+          <div class="giro-viewer__stage" id="giroStage" role="region" aria-label="Visualizador 360 graus do veículo. Arraste para os lados para girar.">
+            <!-- 360 Turntable Floor Ring -->
+            <div class="giro-viewer__floor-ring" aria-hidden="true">
+              <span class="giro-viewer__degree-badge">360°</span>
+            </div>
+
+            <!-- Car Image Frame -->
+            <img
+              id="giroImg"
+              class="giro-viewer__img"
+              src="https://inconnectsites.s3.us-east-1.amazonaws.com/assets/cars/baic/t1/360/blue-22.webp"
+              alt="BAIC ARCFOX T1 BEV em 360°"
+              draggable="false"
+            />
+
+            <!-- Loading / Preload Spinner Overlay -->
+            <div class="giro-viewer__loader" id="giroLoader" aria-hidden="true">
+              <span class="giro-viewer__spinner"></span>
+              <span>Carregando ângulos 360°...</span>
+            </div>
+          </div>
+
+          <!-- Interactive Controls Bar: Drag Hint + Color Swatches + Auto-Spin Toggle -->
+          <div class="giro-controls">
+            <!-- Left: Drag Hint / Auto-Rotate Button -->
+            <div class="giro-controls__left">
+              <button type="button" class="giro-auto-btn" id="giroAutoBtn" title="Ativar/Pausar giro automático">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M3 12a9 9 0 0 1 15.5-6.3M21 12a9 9 0 0 1-15.5 6.3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M18 3v3.5h-3.5M6 21v-3.5h3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span id="giroAutoLabel">Arraste ou clique para girar 360°</span>
+              </button>
+            </div>
+
+            <!-- Center: Framer-Style Color Selector Dock -->
+            <div class="giro-swatches" role="radiogroup" aria-label="Escolha a cor do ARCFOX T1">
+              <button
+                type="button"
+                class="giro-swatch is-active"
+                data-color-index="0"
+                data-color-name="Azul Atlântico"
+                style="--swatch-color: #2F5BA8; --swatch-ring: #1e7bff;"
+                aria-label="Cor Azul Atlântico"
+                aria-checked="true"
+                role="radio"
+              >
+                <span class="giro-swatch__dot"></span>
+              </button>
+
+              <button
+                type="button"
+                class="giro-swatch"
+                data-color-index="1"
+                data-color-name="Branco Polar"
+                style="--swatch-color: #F2F4F7; --swatch-ring: #94a3b8;"
+                aria-label="Cor Branco Polar"
+                aria-checked="false"
+                role="radio"
+              >
+                <span class="giro-swatch__dot"></span>
+              </button>
+
+              <button
+                type="button"
+                class="giro-swatch"
+                data-color-index="2"
+                data-color-name="Cinza Titânio"
+                style="--swatch-color: #8A8F94; --swatch-ring: #64748b;"
+                aria-label="Cor Cinza Titânio"
+                aria-checked="false"
+                role="radio"
+              >
+                <span class="giro-swatch__dot"></span>
+              </button>
+
+              <button
+                type="button"
+                class="giro-swatch"
+                data-color-index="3"
+                data-color-name="Prata Aurora"
+                style="--swatch-color: linear-gradient(145deg, #DDE1E6 0%, #BCC2C9 100%); --swatch-ring: #94a3b8;"
+                aria-label="Cor Prata Aurora"
+                aria-checked="false"
+                role="radio"
+              >
+                <span class="giro-swatch__dot"></span>
+              </button>
+
+              <div class="giro-swatches__divider" aria-hidden="true"></div>
+              <span class="giro-swatches__label" id="giroColorName">Azul Atlântico</span>
+            </div>
+
+            <!-- Right: CTA for Selected Color -->
+            <div class="giro-controls__right">
+              <button type="button" class="btn-framer btn-framer--dark" data-open-modal>
+                <span class="btn-framer__label">Reservar nesta cor</span>
+                <span class="btn-framer__badge" aria-hidden="true">
+                  <svg class="btn-framer__arrow btn-framer__arrow--primary" viewBox="0 0 16 16" fill="none">
+                    <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <svg class="btn-framer__arrow btn-framer__arrow--secondary" viewBox="0 0 16 16" fill="none">
+                    <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Minimalist Official Specs Strip -->
+        <div class="studio-specs scroll-reveal">
+          <div class="studio-spec">
+            <span class="studio-spec__value">95 <small>cv</small></span>
+            <span class="studio-spec__label">Potência 100% elétrica</span>
+          </div>
+          <div class="studio-spec">
+            <span class="studio-spec__value">300 <small>km</small></span>
+            <span class="studio-spec__label">Autonomia estimada (até)</span>
+          </div>
+          <div class="studio-spec">
+            <span class="studio-spec__value">16 <small>min</small></span>
+            <span class="studio-spec__label">Recarga rápida (140 kW)</span>
+          </div>
+          <div class="studio-spec">
+            <span class="studio-spec__value">459 <small>L</small></span>
+            <span class="studio-spec__label">Porta-malas (até 1.352 L)</span>
+          </div>
+          <div class="studio-spec">
+            <span class="studio-spec__value">15,6<small>"</small></span>
+            <span class="studio-spec__label">Central multimídia</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 3: SCROLL-LOCKED DRONE VIDEO + VERTICAL FOCUS-WHEEL TEXT CAROUSEL
+         Video scrubs 0% -> 100% as user scrolls; vertical text wheel on left
+         keeps center item 100% sharp while blurring & dimming items above/below
+         ========================================== -->
+    <section class="drone-scroll" id="experiencia" aria-label="Experiência em Movimento ARCFOX T1">
+      <div class="drone-scroll__sticky" id="droneSticky">
+
+        <!-- High-FPS Scrubbing Canvas + Fallback Video -->
+        <div class="drone-scroll__media">
+          <canvas id="droneCanvas" class="drone-scroll__canvas" width="1920" height="1080"></canvas>
+          <video
+            id="droneVideoFallback"
+            class="drone-scroll__video-fallback"
+            src="assets/drone-scrub.mp4"
+            muted
+            playsinline
+            preload="auto"
+            poster="assets/drone-poster.jpg"
+          ></video>
+
+          <!-- Left-Side Dark Gradient Cushion for Text Contrast (No Card Box) -->
+          <div class="drone-scroll__shade" aria-hidden="true"></div>
+        </div>
+
+        <!-- Overlay Interface: Vertical Text Wheel on Left -->
+        <div class="drone-scroll__container">
+          <div class="v-wheel" id="verticalTextWheel">
+
+            <!-- Subtle Left Progress Rail -->
+            <div class="v-wheel__rail" aria-hidden="true">
+              <div class="v-wheel__rail-fill" id="droneRailFill"></div>
+            </div>
+
+            <!-- Vertical Carousel Track (Items move vertically, center is 100% sharp, top/bottom blurred) -->
+            <div class="v-wheel__track" id="vWheelTrack">
+
+              <!-- Step 01: Front / LEDs -->
+              <article class="v-wheel__item" data-step="0">
+                <span class="v-wheel__step">01 &mdash; DESIGN FRONTAL</span>
+                <h3 class="v-wheel__title">Assinatura luminosa Full-LED.</h3>
+                <p class="v-wheel__desc">
+                  Frente aerodinâmica com faixa contínua em LED que impõe presença e identidade futurista em qualquer rodovia.
+                </p>
+              </article>
+
+              <!-- Step 02: Side Profile / Wheels & Wheelbase -->
+              <article class="v-wheel__item" data-step="1">
+                <span class="v-wheel__step">02 &mdash; PERFIL &amp; PROPORÇÃO</span>
+                <h3 class="v-wheel__title">Compacto por fora, gigante por dentro.</h3>
+                <p class="v-wheel__desc">
+                  Rodas esportivas aerodinâmicas, teto flutuante bicolor e 2.770 mm de entre-eixos para máximo conforto interno.
+                </p>
+              </article>
+
+              <!-- Step 03: Rear 3/4 / 3D Taillights -->
+              <article class="v-wheel__item" data-step="2">
+                <span class="v-wheel__step">03 &mdash; ASSINATURA TRASEIRA</span>
+                <h3 class="v-wheel__title">Lanternas geométricas em LED 3D.</h3>
+                <p class="v-wheel__desc">
+                  Design traseiro esculpido com iluminação tridimensional integrada ao acabamento black piano de alto contraste.
+                </p>
+              </article>
+
+              <!-- Step 04: Driving Away / Autonomy & Performance -->
+              <article class="v-wheel__item" data-step="3">
+                <span class="v-wheel__step">04 &mdash; AUTONOMIA &amp; LIBERDADE</span>
+                <h3 class="v-wheel__title">Pronto para ir além do horizonte.</h3>
+                <p class="v-wheel__desc">
+                  Até 300 km de autonomia 100% elétrica e recarga ultrarrápida em apenas 16 minutos para acompanhar o seu ritmo.
+                </p>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- Bottom-Right Discreet Scroll Scrubbing Indicator -->
+          <div class="drone-scroll__hud" aria-hidden="true">
+            <span class="drone-scroll__hud-label">Role para avançar o voo</span>
+            <span class="drone-scroll__hud-pct" id="droneScrollPct">01 / 04</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 4: NEXT SECTION (RISES OVER THE DRONE VIDEO ON EXIT)
+         Demonstrates the smooth exit transition of the drone section
+         ========================================== -->
+    <section class="after-drone" id="duvidas" aria-labelledby="afterDroneTitle">
+      <div class="after-drone__sheet-bar" aria-hidden="true"></div>
+
+      <div class="after-drone__container">
+        <div class="after-drone__header scroll-reveal">
+          <div class="after-drone__eyebrow">
+            <span class="after-drone__slashes">///</span>
+            <span class="after-drone__tag">INTERIOR &amp; TECNOLOGIA</span>
+          </div>
+
+          <h2 class="after-drone__title" id="afterDroneTitle">
+            Minimalismo pensado para <span class="after-drone__title-accent">quem dirige o futuro.</span>
+          </h2>
+
+          <p class="after-drone__subtitle">
+            Cabine silenciosa, acabamento refinado e conectividade intuitiva de última geração em cada detalhe do <strong>ARCFOX T1</strong>.
+          </p>
+        </div>
+
+        <!-- 3 Minimalist Editorial Bento Cards (3D Scroll Entrance) -->
+        <div class="after-drone__grid" id="bentoGrid3D">
+          <article class="bento-card" data-card-3d="0">
+            <div class="bento-card__media">
+              <img src="assets/gallery/gal-08.jpg" alt="Central Multimídia 15,6 polegadas e Painel Digital ARCFOX T1" loading="lazy" />
+            </div>
+            <div class="bento-card__body">
+              <span class="bento-card__num">01</span>
+              <h3 class="bento-card__title">Central Multimídia 15,6"</h3>
+              <p class="bento-card__desc">
+                Interface fluida de alta definição com Apple CarPlay e Android Auto sem fio integrados ao painel minimalista.
+              </p>
+            </div>
+          </article>
+
+          <article class="bento-card" data-card-3d="1">
+            <div class="bento-card__media">
+              <img src="assets/gallery/gal-01.jpg" alt="Espaço Interno com 2.770 mm de Entre-Eixos ARCFOX T1" loading="lazy" />
+            </div>
+            <div class="bento-card__body">
+              <span class="bento-card__num">02</span>
+              <h3 class="bento-card__title">2.770 mm de Entre-Eixos</h3>
+              <p class="bento-card__desc">
+                Assoalho 100% plano e aproveitamento inteligente de espaço que entrega conforto de categoria superior.
+              </p>
+            </div>
+          </article>
+
+          <article class="bento-card" data-card-3d="2">
+            <div class="bento-card__media">
+              <img src="assets/gallery/gal-11.jpg" alt="Performance Elétrica e Recarga Rápida em 16 min ARCFOX T1" loading="lazy" />
+            </div>
+            <div class="bento-card__body">
+              <span class="bento-card__num">03</span>
+              <h3 class="bento-card__title">Recarga Rápida em 16 min</h3>
+              <p class="bento-card__desc">
+                Arquitetura elétrica moderna preparada para recarga ultrarrápida DC e máxima eficiência urbana.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Minimalist Bottom CTA Banner -->
+        <div class="after-drone__cta-bar" id="localizacao">
+          <div class="after-drone__cta-copy">
+            <h3 class="after-drone__cta-title">Sinta a experiência ARCFOX T1 ao vivo.</h3>
+            <p class="after-drone__cta-sub">Agende seu test drive exclusivo na concessionária BAIC V12.</p>
+          </div>
+          <button type="button" class="btn-framer btn-framer--dark" data-open-modal>
+            <span class="btn-framer__label">Agendar Test Drive</span>
+            <span class="btn-framer__badge" aria-hidden="true">
+              <svg class="btn-framer__arrow btn-framer__arrow--primary" viewBox="0 0 16 16" fill="none">
+                <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <svg class="btn-framer__arrow btn-framer__arrow--secondary" viewBox="0 0 16 16" fill="none">
+                <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 5: SCROLL-LOCKED BLUE ARCFOX T1 DRIVING RIGHT-TO-LEFT
+         PULLING HORIZONTAL CAROUSEL OF EDITORIAL CARDS
+         ========================================== -->
+    <section class="car-pull-sec" id="destaques" aria-labelledby="carPullTitle">
+      <div class="car-pull-sec__sticky" id="carPullSticky">
+
+        <!-- Minimalist Section Header -->
+        <div class="car-pull-sec__header">
+          <div class="car-pull-sec__eyebrow">
+            <span class="car-pull-sec__slashes">///</span>
+            <span class="car-pull-sec__tag">DESIGN &amp; FUNCIONALIDADE EM MOVIMENTO</span>
+          </div>
+          <h2 class="car-pull-sec__title" id="carPullTitle">
+            Pensado em cada detalhe para <span class="car-pull-sec__title-accent">surpreender você.</span>
+          </h2>
+        </div>
+
+        <!-- Horizontal Moving Convoy Stage (Car in Front Pulling the Cards Carousel) -->
+        <div class="car-pull-sec__viewport">
+          <div class="car-pull-sec__track" id="carPullTrack">
+
+            <!-- 1. LARGE 3D BLUE ARCFOX T1 (DRIVING RIGHT TO LEFT WITH SPINNING RIMS) -->
+            <div class="pull-car" id="pullCar">
+              <div class="pull-car__rig" id="pullCarRig">
+                <!-- Base Side Profile Car -->
+                <img
+                  src="assets/car-blue-side.webp"
+                  alt="BAIC ARCFOX T1 Azul em movimento"
+                  class="pull-car__body"
+                  draggable="false"
+                />
+                <!-- Front Spinning Alloy Wheel -->
+                <img
+                  src="assets/wheel-front.png"
+                  alt=""
+                  aria-hidden="true"
+                  class="pull-car__wheel pull-car__wheel--front"
+                  draggable="false"
+                />
+                <!-- Rear Spinning Alloy Wheel -->
+                <img
+                  src="assets/wheel-rear.png"
+                  alt=""
+                  aria-hidden="true"
+                  class="pull-car__wheel pull-car__wheel--rear"
+                  draggable="false"
+                />
+              </div>
+
+              <!-- Subtle Kinetic Tow Line Connecting Rear of Car to First Card -->
+              <div class="pull-car__tether" aria-hidden="true">
+                <span class="pull-car__tether-dot"></span>
+                <span class="pull-car__tether-line"></span>
+              </div>
+            </div>
+
+            <!-- 2. PULLED CAROUSEL OF CARDS (Reference Style: Large Rounded Photo + Overlays + Title/Subtitle/Desc, No Button) -->
+            <div class="pull-cards" id="pullCardsList">
+
+              <!-- Card 01 -->
+              <article class="pull-card">
+                <div class="pull-card__media">
+                  <img
+                    src="https://inconnectsites.s3.us-east-1.amazonaws.com/assets/cars/baic/t1/img/campanha/painel-mar.webp"
+                    alt="Central Multimídia de 15,6 polegadas do ARCFOX T1"
+                    loading="lazy"
+                    draggable="false"
+                  />
+                  <span class="pull-card__badge">Tecnologia</span>
+                  <span class="pull-card__icon-circle" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <rect x="3" y="4" width="18" height="14" rx="2.5" />
+                      <path d="M8 21h8M12 18v3" stroke-linecap="round" />
+                    </svg>
+                  </span>
+                  <div class="pull-card__dots" aria-hidden="true">
+                    <span class="is-active"></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+                <div class="pull-card__body">
+                  <h3 class="pull-card__title">Central Multimídia 15,6"</h3>
+                  <p class="pull-card__subtitle">Cockpit Digital Inteligente</p>
+                  <p class="pull-card__desc">
+                    Tela flutuante de altíssima definição com Apple CarPlay, Android Auto sem fio e controle total do veículo.
+                  </p>
+                </div>
+              </article>
+
+              <!-- Card 02 -->
+              <article class="pull-card">
+                <div class="pull-card__media">
+                  <img
+                    src="https://inconnectsites.s3.us-east-1.amazonaws.com/assets/cars/baic/t1/img/campanha/bancos-cama.webp"
+                    alt="Bancos reclináveis em 180 graus do ARCFOX T1"
+                    loading="lazy"
+                    draggable="false"
+                  />
+                  <span class="pull-card__badge">Conforto 180°</span>
+                  <span class="pull-card__icon-circle" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M4 15h16M6 11l3-5h6l3 5M5 15v4M19 15v4" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  <div class="pull-card__dots" aria-hidden="true">
+                    <span></span><span class="is-active"></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+                <div class="pull-card__body">
+                  <h3 class="pull-card__title">Espaço para a Vida</h3>
+                  <p class="pull-card__subtitle">Bancos que Viram Cama 1,6 m</p>
+                  <p class="pull-card__desc">
+                    Bancos dianteiros que deitam em 180° integrados ao traseiro e porta-malas versátil de até 1.352 litros.
+                  </p>
+                </div>
+              </article>
+
+              <!-- Card 03 -->
+              <article class="pull-card">
+                <div class="pull-card__media">
+                  <img
+                    src="https://inconnectsites.s3.us-east-1.amazonaws.com/assets/cars/baic/t1/img/campanha/teto-crianca.webp"
+                    alt="Teto panorâmico do ARCFOX T1"
+                    loading="lazy"
+                    draggable="false"
+                  />
+                  <span class="pull-card__badge">Bem-Estar</span>
+                  <span class="pull-card__icon-circle" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <circle cx="12" cy="12" r="4" />
+                      <path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6L17 7M7 17l-1.4 1.4" stroke-linecap="round" />
+                    </svg>
+                  </span>
+                  <div class="pull-card__dots" aria-hidden="true">
+                    <span></span><span></span><span class="is-active"></span><span></span><span></span>
+                  </div>
+                </div>
+                <div class="pull-card__body">
+                  <h3 class="pull-card__title">Teto Panorâmico de Série</h3>
+                  <p class="pull-card__subtitle">2.770 mm de Entre-Eixos</p>
+                  <p class="pull-card__desc">
+                    Ampla iluminação natural, isolamento acústico premium e assoalho 100% plano para quem vai atrás.
+                  </p>
+                </div>
+              </article>
+
+              <!-- Card 04 -->
+              <article class="pull-card">
+                <div class="pull-card__media">
+                  <img
+                    src="https://inconnectsites.s3.us-east-1.amazonaws.com/assets/cars/baic/t1/img/campanha/cidade-lilas.webp"
+                    alt="ARCFOX T1 na cidade com visão 540 graus"
+                    loading="lazy"
+                    draggable="false"
+                  />
+                  <span class="pull-card__badge">Segurança ADAS</span>
+                  <span class="pull-card__icon-circle" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M12 3l7 4v5c0 5-3.5 8.5-7 9-3.5-.5-7-4-7-9V7l7-4z" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  <div class="pull-card__dots" aria-hidden="true">
+                    <span></span><span></span><span></span><span class="is-active"></span><span></span>
+                  </div>
+                </div>
+                <div class="pull-card__body">
+                  <h3 class="pull-card__title">Câmera 540° &amp; Park Assist</h3>
+                  <p class="pull-card__subtitle">Fácil na Cidade</p>
+                  <p class="pull-card__desc">
+                    Visão 540° com chassi transparente, estacionamento automático e 12 funções de segurança ativa nível 2.
+                  </p>
+                </div>
+              </article>
+
+              <!-- Card 05 -->
+              <article class="pull-card">
+                <div class="pull-card__media">
+                  <img
+                    src="https://inconnectsites.s3.us-east-1.amazonaws.com/assets/cars/baic/t1/img/campanha/estrada-litoral.webp"
+                    alt="ARCFOX T1 Azul em rodovia litorânea"
+                    loading="lazy"
+                    draggable="false"
+                  />
+                  <span class="pull-card__badge">100% Elétrico</span>
+                  <span class="pull-card__icon-circle" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  <div class="pull-card__dots" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span class="is-active"></span>
+                  </div>
+                </div>
+                <div class="pull-card__body">
+                  <h3 class="pull-card__title">Recarga Rápida em 16 min</h3>
+                  <p class="pull-card__subtitle">Até 300 km de Autonomia</p>
+                  <p class="pull-card__desc">
+                    Recarga ultrarrápida DC de 140 kW e eficiência energética pensada para acompanhar o seu ritmo diário.
+                  </p>
+                </div>
+              </article>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Subtle Bottom Scroll Progress Bar -->
+        <div class="car-pull-sec__footer">
+          <div class="car-pull-sec__progress">
+            <div class="car-pull-sec__progress-bar" id="carPullProgressBar"></div>
+          </div>
+          <span class="car-pull-sec__hint">Role para ver o ARCFOX T1 em movimento</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 6: SCROLL-LOCKED BATTERY EXPLODED VIEW (BATERIA AURORA)
+         ========================================== -->
+    <section class="battery-scroll" id="bateria" aria-labelledby="batteryTitle">
+      <div class="battery-scroll__sticky" id="batterySticky">
+
+        <!-- 60fps Scroll-Scrubbed Canvas of Battery Opening in Layers -->
+        <canvas
+          id="batteryCanvas"
+          class="battery-scroll__canvas"
+          width="1920"
+          height="1080"
+        ></canvas>
+
+        <!-- Persistent Top Editorial Header (High-Contrast Dark Typography on Light Studio Background) -->
+        <div class="battery-scroll__header">
+          <span class="battery-scroll__eyebrow">/// MATRIZ DE PROTEÇÃO DE 10 CAMADAS</span>
+          <h2 class="battery-scroll__title" id="batteryTitle">
+            BATERIA <span>AURORA</span>
+          </h2>
+          <p class="battery-scroll__subtitle">
+            Proteção Tripla de Segurança e Performance Real de Confiança — Resistente ao fogo, resistente a impactos, à prova d’água e com autonomia genuína.
+          </p>
+        </div>
+
+        <!-- Alternating Left & Right White Cards with Clean Pointer Lines -->
+        <div class="battery-callouts" id="batteryCallouts">
+
+          <!-- Callout 01: Top-Left (Points to Top 3D Firewall & Aerogel Layer) -->
+          <article class="bat-callout bat-callout--left bat-callout--pos-1 is-active" data-bat-step="0">
+            <div class="bat-callout__card">
+              <div class="bat-card__top">
+                <span class="bat-card__badge">01 • Firewall 3D</span>
+                <span class="bat-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M12 2c1.5 3.5 4 5.5 4 9a4 4 0 11-8 0c0-2 1-3.5 2-5-1 3 1 4 2 4s1-2 0-8z" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5 20h14" stroke-linecap="round"/>
+                  </svg>
+                </span>
+              </div>
+              <h3 class="bat-callout__heading">44 Painéis de Aerogel &amp; Isolamento Térmico</h3>
+              <p class="bat-callout__highlight">Cobertura de até 2,6 m² • “Bloquear, Desviar e Controlar”</p>
+              <p class="bat-callout__desc">
+                Tecnologia 3 em 1 de manta térmica corta-fogo que alcança zero combustão espontânea, zero ignição e zero explosão em qualquer condição.
+              </p>
+              <div class="bat-card__dots" aria-hidden="true">
+                <span class="is-active"></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="bat-callout__pointer" aria-hidden="true">
+              <span class="bat-callout__line"></span>
+              <span class="bat-callout__dot"></span>
+            </div>
+          </article>
+
+          <!-- Callout 02: Top-Right (Points to Upper-Mid Cloud BMS & Cell Pack) -->
+          <article class="bat-callout bat-callout--right bat-callout--pos-2" data-bat-step="1">
+            <div class="bat-callout__pointer" aria-hidden="true">
+              <span class="bat-callout__dot"></span>
+              <span class="bat-callout__line"></span>
+            </div>
+            <div class="bat-callout__card">
+              <div class="bat-card__top">
+                <span class="bat-card__badge">02 • Proteção em Nuvem 7×24h</span>
+                <span class="bat-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M17.5 19H7a4.5 4.5 0 01-.7-8.95A6 6 0 0118 11a3.5 3.5 0 01-.5 8z" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+              <h3 class="bat-callout__heading">Monitoramento Inteligente em Tempo Real</h3>
+              <p class="bat-callout__highlight">Supervisão 24/7 na Nuvem • Zero Degradação por 15 Anos</p>
+              <p class="bat-callout__desc">
+                Monitoramento contínuo do status da bateria em tempo real na nuvem, aliado a uma vedação de alta precisão com zero degradação por 15 anos.
+              </p>
+              <div class="bat-card__dots" aria-hidden="true">
+                <span></span><span class="is-active"></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Callout 03: Mid-Left (Points to Cross-Directional Reinforcement Frame) -->
+          <article class="bat-callout bat-callout--left bat-callout--pos-3" data-bat-step="2">
+            <div class="bat-callout__card">
+              <div class="bat-card__top">
+                <span class="bat-card__badge">03 • Armadura Dupla</span>
+                <span class="bat-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M12 3l7 4v5c0 5-3.5 8.5-7 9-3.5-.5-7-4-7-9V7l7-4z" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+              <h3 class="bat-callout__heading">Estrutura de Alta Resistência a Impactos</h3>
+              <p class="bat-callout__highlight">Vigas de Reforço Transversais • Matriz de 10 Camadas</p>
+              <p class="bat-callout__desc">
+                Quadro estrutural reforçado com vigas multidirecionais projetadas para absorver energia extrema de colisão e proteger o núcleo energético.
+              </p>
+              <div class="bat-card__dots" aria-hidden="true">
+                <span></span><span></span><span class="is-active"></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="bat-callout__pointer" aria-hidden="true">
+              <span class="bat-callout__line"></span>
+              <span class="bat-callout__dot"></span>
+            </div>
+          </article>
+
+          <!-- Callout 04: Lower-Right (Points to Submarine-Grade Seal Layer) -->
+          <article class="bat-callout bat-callout--right bat-callout--pos-4" data-bat-step="3">
+            <div class="bat-callout__pointer" aria-hidden="true">
+              <span class="bat-callout__dot"></span>
+              <span class="bat-callout__line"></span>
+            </div>
+            <div class="bat-callout__card">
+              <div class="bat-card__top">
+                <span class="bat-card__badge">04 • Nível Submarino</span>
+                <span class="bat-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+              <h3 class="bat-callout__heading">Proteção Máxima Contra Água e Poeira</h3>
+              <p class="bat-callout__highlight">Certificação IP68 + IPX9K • Vedação Hermética Extrema</p>
+              <p class="bat-callout__desc">
+                O mais alto nível de proteção contra imersão profunda, poeira e jatos de alta pressão, assegurando confiabilidade absoluta sob chuva severa.
+              </p>
+              <div class="bat-card__dots" aria-hidden="true">
+                <span></span><span></span><span></span><span class="is-active"></span><span></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Callout 05: Bottom-Left (Points to Bottom 7-Layer Basalt Shield) -->
+          <article class="bat-callout bat-callout--left bat-callout--pos-5" data-bat-step="4">
+            <div class="bat-callout__card">
+              <div class="bat-card__top">
+                <span class="bat-card__badge">05 • Escudo de Basalto</span>
+                <span class="bat-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+              <h3 class="bat-callout__heading">Blindagem Inferior de 7 Camadas</h3>
+              <p class="bat-callout__highlight">7 Camadas de Fibra de Basalto • Proteção Total de Base</p>
+              <p class="bat-callout__desc">
+                Tecnologia de blindagem inferior em 7 camadas que protege a base da bateria contra detritos de pista, raspagens e impactos severos.
+              </p>
+              <div class="bat-card__dots" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span class="is-active"></span>
+              </div>
+            </div>
+            <div class="bat-callout__pointer" aria-hidden="true">
+              <span class="bat-callout__line"></span>
+              <span class="bat-callout__dot"></span>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Bottom HUD Progress Indicator -->
+        <div class="battery-scroll__hud" aria-hidden="true">
+          <div class="battery-scroll__progress">
+            <div class="battery-scroll__progress-bar" id="batteryProgressBar"></div>
+          </div>
+          <span class="battery-scroll__hud-label" id="batteryScrollPct">Camada 01 / 05 • 0%</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 7: INTERACTIVE INTERIOR CONFIGURATOR (PRETO NOIR & CINZA CHAMPAGNE)
+         ========================================== -->
+    <section class="interior-sec" id="interiores" aria-labelledby="interiorTitle">
+      <div class="interior-sec__container">
+
+        <!-- Section Header -->
+        <div class="interior-sec__header">
+          <span class="interior-sec__eyebrow">/// DESIGN DE CABINE &amp; ACABAMENTO PREMIUM</span>
+          <h2 class="interior-sec__title" id="interiorTitle">
+            Escolha o Seu <span>Interior</span>
+          </h2>
+          <p class="interior-sec__subtitle" id="interiorInstruction">
+            Clique no veículo ou na prévia do acabamento de sua preferência para aproximar o ARCFOX T1 e entrar na cabine.
+          </p>
+        </div>
+
+        <!-- Interactive Stage Wrapper (Hosts Both Dual 3D Cars & Framed Interior Showcase Over White Background) -->
+        <div class="interior-stage" id="interiorStage" data-state="showroom" data-active-color="noir">
+
+          <!-- 1. DUAL 3D CARS + INTERIOR PREVIEWS (Showroom State) -->
+          <div class="interior-duel" id="interiorDuel">
+
+            <!-- LEFT OPTION: AZUL ATLÂNTICO + INTERIOR PRETO NOIR -->
+            <div
+              class="int-portal int-portal--left"
+              data-interior-select="noir"
+              role="button"
+              tabindex="0"
+              aria-label="Selecionar e entrar no Interior Preto Noir"
+            >
+              <!-- Preview Card Behind the 3D Car -->
+              <div class="int-portal__preview">
+                <div class="int-portal__preview-media">
+                  <img
+                    src="assets/interior-preto-noir.jpg"
+                    alt="Prévia do Interior Preto Noir"
+                    draggable="false"
+                  />
+                  <span class="int-portal__tag">
+                    <span class="int-portal__swatch int-portal__swatch--noir"></span>
+                    Opção 01 • Preto Noir
+                  </span>
+                  <span class="int-portal__cta-pill">
+                    <span>Clique para entrar</span>
+                    <svg viewBox="0 0 16 16" fill="none">
+                      <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                </div>
+                <div class="int-portal__preview-info">
+                  <h3 class="int-portal__name">Preto Noir</h3>
+                  <p class="int-portal__desc">
+                    Atmosfera esportiva e sofisticada em grafite escuro e preto noir com bancos perfurados em padrão diamante.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 3D Car in Front (Smoothly Morphs to Front & Rushes Screen on Click) -->
+              <div class="int-portal__car-rig" id="intCarLeftRig">
+                <div class="int-portal__car-shadow" aria-hidden="true"></div>
+                <div class="int-portal__car-stage">
+                  <img
+                    id="intCarLeftImg"
+                    class="int-portal__car-img int-portal__car-img--angled"
+                    src="https://inconnectsites.s3.us-east-1.amazonaws.com/assets/cars/baic/t1/360/blue-22.webp"
+                    alt="ARCFOX T1 Azul Atlântico — Clique para entrar no Interior Preto Noir"
+                    draggable="false"
+                  />
+                  <img
+                    class="int-portal__car-img int-portal__car-img--front"
+                    src="https://inconnectsites.s3.us-east-1.amazonaws.com/assets/cars/baic/t1/360/blue-18.webp"
+                    alt=""
+                    aria-hidden="true"
+                    draggable="false"
+                  />
+                </div>
+                <div class="int-portal__click-hint">
+                  <span class="int-portal__pulse-dot"></span>
+                  <span>Entrar no Preto Noir</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT OPTION: CINZA TITÂNIO (MIRRORED ANGLE) + INTERIOR CINZA CHAMPAGNE -->
+            <div
+              class="int-portal int-portal--right"
+              data-interior-select="champagne"
+              role="button"
+              tabindex="0"
+              aria-label="Selecionar e entrar no Interior Cinza Champagne"
+            >
+              <!-- Preview Card Behind the 3D Car -->
+              <div class="int-portal__preview">
+                <div class="int-portal__preview-media">
+                  <img
+                    src="assets/interior-cinza-champagne.jpg"
+                    alt="Prévia do Interior Cinza Champagne"
+                    draggable="false"
+                  />
+                  <span class="int-portal__tag">
+                    <span class="int-portal__swatch int-portal__swatch--champagne"></span>
+                    Opção 02 • Cinza Champagne
+                  </span>
+                  <span class="int-portal__cta-pill">
+                    <span>Clique para entrar</span>
+                    <svg viewBox="0 0 16 16" fill="none">
+                      <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                </div>
+                <div class="int-portal__preview-info">
+                  <h3 class="int-portal__name">Cinza Champagne</h3>
+                  <p class="int-portal__desc">
+                    Luminosidade acolhedora e requinte contemporâneo em tom champagne com acabamento Soft-Touch.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 3D Car in Front (Mirrored 3/4 Angle — Smoothly Morphs to Front & Rushes Screen on Click) -->
+              <div class="int-portal__car-rig" id="intCarRightRig">
+                <div class="int-portal__car-shadow" aria-hidden="true"></div>
+                <div class="int-portal__car-stage">
+                  <img
+                    id="intCarRightImg"
+                    class="int-portal__car-img int-portal__car-img--angled int-portal__car-img--mirrored"
+                    src="https://inconnectsites.s3.us-east-1.amazonaws.com/assets/cars/baic/t1/360/gray-22.webp"
+                    alt="ARCFOX T1 Cinza Titânio — Clique para entrar no Interior Cinza Champagne"
+                    draggable="false"
+                  />
+                  <img
+                    class="int-portal__car-img int-portal__car-img--front"
+                    src="https://inconnectsites.s3.us-east-1.amazonaws.com/assets/cars/baic/t1/360/gray-18.webp"
+                    alt=""
+                    aria-hidden="true"
+                    draggable="false"
+                  />
+                </div>
+                <div class="int-portal__click-hint">
+                  <span class="int-portal__pulse-dot"></span>
+                  <span>Entrar no Cinza Champagne</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- 2. FRAMED CABIN VIEWER CARD (Smaller than Full Screen, Floating Over White Background) -->
+          <div class="int-cabin" id="interiorCabinCard" aria-hidden="true">
+            <div class="int-cabin__frame">
+
+              <!-- Top Bar Inside Cabin Frame: Active Label + Exit Button (Reverses Car Animation) -->
+              <div class="int-cabin__topbar">
+                <div class="int-cabin__status">
+                  <span class="int-cabin__status-dot" id="intCabinStatusDot"></span>
+                  <span class="int-cabin__status-label" id="intCabinStatusLabel">Cabine ARCFOX T1 • Preto Noir</span>
+                </div>
+
+                <button type="button" class="int-cabin__exit-btn" id="exitInteriorBtn">
+                  <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M15 10H5M5 10l4-4M5 10l4 4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Sair do Interior (Voltar aos Carros)</span>
+                </button>
+              </div>
+
+              <!-- High-Res Interior Image Stage with Creative Circular Iris Wipe Transition -->
+              <div class="int-cabin__viewport" id="intCabinViewport">
+                <!-- Base Image Layer -->
+                <img
+                  id="intCabinBaseImg"
+                  class="int-cabin__img int-cabin__img--base"
+                  src="assets/interior-preto-noir.jpg"
+                  alt="Visão interna da cabine do ARCFOX T1"
+                  draggable="false"
+                />
+                <!-- Iris Reveal Overlay Image Layer (Animates clip-path circle when switching colors) -->
+                <img
+                  id="intCabinRevealImg"
+                  class="int-cabin__img int-cabin__img--reveal"
+                  src="assets/interior-cinza-champagne.jpg"
+                  alt=""
+                  aria-hidden="true"
+                  draggable="false"
+                />
+
+                <!-- Bottom Floating Interactive Color Selector Dock Inside the Cabin Frame -->
+                <div class="int-cabin__dock" role="group" aria-label="Alternar cor do interior">
+                  <span class="int-cabin__dock-hint">Alternar acabamento:</span>
+
+                  <button
+                    type="button"
+                    class="int-cabin__switch is-active"
+                    data-cabin-switch="noir"
+                  >
+                    <span class="int-cabin__switch-swatch int-cabin__switch-swatch--noir"></span>
+                    <span class="int-cabin__switch-text">
+                      <strong>Preto Noir</strong>
+                      <small>Grafite &amp; Noir</small>
+                    </span>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="int-cabin__switch"
+                    data-cabin-switch="champagne"
+                  >
+                    <span class="int-cabin__switch-swatch int-cabin__switch-swatch--champagne"></span>
+                    <span class="int-cabin__switch-text">
+                      <strong>Cinza Champagne</strong>
+                      <small>Champagne &amp; Noir</small>
+                    </span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Bottom Caption Bar Inside the White Frame -->
+              <div class="int-cabin__footer">
+                <div class="int-cabin__footer-info">
+                  <h3 class="int-cabin__footer-title" id="intCabinFooterTitle">Acabamento Preto Noir</h3>
+                  <p class="int-cabin__footer-desc" id="intCabinFooterDesc">
+                    Bancos ergonômicos com costura em diamante, painel digital de 8,8&quot; e multimídia flutuante de 15,6&quot;.
+                  </p>
+                </div>
+                <button type="button" class="int-cabin__back-link" data-exit-interior>
+                  Ver visão externa dos veículos ↗
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 7.5: TECNOLOGIA SMART ASSIST (CARDS EMPILHADOS EM SCROLL)
+         ========================================== -->
+    <section class="smart-stack-sec" id="tecnologia-smart" aria-labelledby="smartStackTitle">
+      <div class="smart-stack-sec__container">
+
+        <!-- Section Header ("With Smart Assist Technology / [Nailing It in One Go] Makes Driving a Breeze") -->
+        <div class="smart-stack-sec__header">
+          <span class="smart-stack-sec__eyebrow">/// WITH SMART ASSIST TECHNOLOGY</span>
+          <h2 class="smart-stack-sec__title" id="smartStackTitle">
+            Manobras de Primeira. <span>Dirigir Nunca Foi Tão Leve.</span>
+          </h2>
+          <p class="smart-stack-sec__subtitle">
+            Domine espaços estreitos como um profissional — até quem está começando dirige com inteligência máxima desde o primeiro dia. Role para explorar cada tecnologia.
+          </p>
+        </div>
+
+        <!-- Sticky Stacked Cards Deck (6 Cards that stack one over another while previous cards scale back) -->
+        <div class="smart-stack-deck" id="smartStackDeck">
+
+          <!-- CARD 01: Turn with Ease / Smart Steering Assist -->
+          <div class="smart-stack-slot" data-stack-index="0">
+            <article class="smart-card" style="--stack-idx: 0;">
+              <div class="smart-card__media">
+                <img
+                  src="assets/smart-tech/tech-01.jpg"
+                  alt="Direção Inteligente em Baixa Velocidade ARCFOX T1"
+                  class="smart-card__img"
+                />
+                <div class="smart-card__scrim" aria-hidden="true"></div>
+              </div>
+
+              <!-- Top Strategic Badge Row -->
+              <div class="smart-card__topbar">
+                <span class="smart-card__step">01 / 06</span>
+                <span class="smart-card__pill">Low-Speed Intelligent Steering</span>
+              </div>
+
+              <!-- Bottom Strategic Content Overlay -->
+              <div class="smart-card__bottom">
+                <div class="smart-card__copy">
+                  <span class="smart-card__kicker">Turn with Ease</span>
+                  <h3 class="smart-card__heading">Manobre com Absoluta Leveza</h3>
+                  <p class="smart-card__desc">
+                    Tecnologia inteligente de assistência de direção em baixa velocidade, inédita na categoria.
+                  </p>
+                </div>
+
+                <div class="smart-card__metrics" aria-label="Métricas de Direção">
+                  <div class="smart-metric">
+                    <strong class="smart-metric__val">14.9</strong>
+                    <span class="smart-metric__lbl">Relação Áurea de Direção</span>
+                  </div>
+                  <div class="smart-metric">
+                    <strong class="smart-metric__val">-30 cm</strong>
+                    <span class="smart-metric__lbl">Diâmetro de Giro Reduzido</span>
+                  </div>
+                  <div class="smart-metric">
+                    <strong class="smart-metric__val">5,2 m</strong>
+                    <span class="smart-metric__lbl">Raio Mínimo de Giro</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- CARD 02: 540° Surround View Camera System -->
+          <div class="smart-stack-slot" data-stack-index="1">
+            <article class="smart-card" style="--stack-idx: 1;">
+              <div class="smart-card__media">
+                <img
+                  src="assets/smart-tech/tech-02.jpg"
+                  alt="Sistema de Câmeras 540° Surround View ARCFOX T1"
+                  class="smart-card__img"
+                />
+                <div class="smart-card__scrim" aria-hidden="true"></div>
+              </div>
+
+              <div class="smart-card__topbar">
+                <span class="smart-card__step">02 / 06</span>
+                <span class="smart-card__pill">540° Surround View System</span>
+              </div>
+
+              <div class="smart-card__bottom">
+                <div class="smart-card__copy">
+                  <span class="smart-card__kicker">Visão Total Sem Pontos Cegos</span>
+                  <h3 class="smart-card__heading">Sistema de Câmeras 540° Surround View</h3>
+                  <p class="smart-card__desc">
+                    Visão Panorâmica 360° combinada ao Chassi Transparente 180° diretamente na tela central de 15,6&quot;.
+                  </p>
+                </div>
+
+                <div class="smart-card__metrics" aria-label="Especificações de Câmera">
+                  <div class="smart-metric">
+                    <strong class="smart-metric__val">360°</strong>
+                    <span class="smart-metric__lbl">Visão Panorâmica HD</span>
+                  </div>
+                  <div class="smart-metric">
+                    <strong class="smart-metric__val">+180°</strong>
+                    <span class="smart-metric__lbl">Chassi Transparente</span>
+                  </div>
+                  <div class="smart-metric">
+                    <strong class="smart-metric__val">540°</strong>
+                    <span class="smart-metric__lbl">Varredura Completa</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- CARD 03: All-New Generation Intelligent Parking Assist -->
+          <div class="smart-stack-slot" data-stack-index="2">
+            <article class="smart-card" style="--stack-idx: 2;">
+              <div class="smart-card__media">
+                <img
+                  src="assets/smart-tech/tech-03.jpg"
+                  alt="Assistente Inteligente de Estacionamento de Nova Geração ARCFOX T1"
+                  class="smart-card__img"
+                />
+                <div class="smart-card__scrim" aria-hidden="true"></div>
+              </div>
+
+              <div class="smart-card__topbar">
+                <span class="smart-card__step">03 / 06</span>
+                <span class="smart-card__pill">Intelligent Parking Assist</span>
+              </div>
+
+              <div class="smart-card__bottom">
+                <div class="smart-card__copy">
+                  <span class="smart-card__kicker">Nova Geração de Estacionamento Autônomo</span>
+                  <h3 class="smart-card__heading">Estacione com Precisão em Um Único Movimento</h3>
+                  <p class="smart-card__desc">
+                    Diga adeus à ansiedade ao estacionar — leitura instantânea de vagas e manobra 100% automatizada.
+                  </p>
+                </div>
+
+                <div class="smart-card__metrics smart-card__metrics--five" aria-label="Métricas de Estacionamento">
+                  <div class="smart-metric">
+                    <strong class="smart-metric__val">58 Tipos</strong>
+                    <span class="smart-metric__lbl">Cenários de Vagas</span>
+                  </div>
+                  <div class="smart-metric">
+                    <strong class="smart-metric__val">&ge;95%</strong>
+                    <span class="smart-metric__lbl">Taxa de Sucesso</span>
+                  </div>
+                  <div class="smart-metric">
+                    <strong class="smart-metric__val">90%</strong>
+                    <span class="smart-metric__lbl">Sucesso de Primeira</span>
+                  </div>
+                  <div class="smart-metric">
+                    <strong class="smart-metric__val">98%</strong>
+                    <span class="smart-metric__lbl">Reconhecimento</span>
+                  </div>
+                  <div class="smart-metric">
+                    <strong class="smart-metric__val">50 m</strong>
+                    <span class="smart-metric__lbl">Rastreamento de Ré</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- CARD 04: Control Your Car with Your Phone -->
+          <div class="smart-stack-slot" data-stack-index="3">
+            <article class="smart-card" style="--stack-idx: 3;">
+              <div class="smart-card__media">
+                <img
+                  src="assets/smart-tech/tech-04.jpg"
+                  alt="Controle Remoto pelo Smartphone ARCFOX T1"
+                  class="smart-card__img"
+                />
+                <div class="smart-card__scrim" aria-hidden="true"></div>
+              </div>
+
+              <div class="smart-card__topbar">
+                <span class="smart-card__step">04 / 06</span>
+                <span class="smart-card__pill">Smart Mobile Control</span>
+              </div>
+
+              <div class="smart-card__bottom">
+                <div class="smart-card__copy">
+                  <span class="smart-card__kicker">Liberdade na Ponta dos Dedos</span>
+                  <h3 class="smart-card__heading">Controle Seu Carro pelo Smartphone</h3>
+                  <p class="smart-card__desc">
+                    Manobre o veículo à distância em vagas apertadas e localize seu ARCFOX T1 com um toque.
+                  </p>
+                </div>
+
+                <div class="smart-card__tags" aria-label="Funções Remotas pelo Celular">
+                  <span class="smart-tag">
+                    <span class="smart-tag__dot"></span>
+                    Assistência de Condução Remota
+                  </span>
+                  <span class="smart-tag">
+                    <span class="smart-tag__dot"></span>
+                    Localizador Inteligente do Veículo
+                  </span>
+                  <span class="smart-tag">
+                    <span class="smart-tag__dot"></span>
+                    Estacionamento Remoto via App
+                  </span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- CARD 05: Level 2 Combined Driver Assistance -->
+          <div class="smart-stack-slot" data-stack-index="4">
+            <article class="smart-card" style="--stack-idx: 4;">
+              <div class="smart-card__media">
+                <img
+                  src="assets/smart-tech/tech-05.jpg"
+                  alt="Assistência de Condução Combinada Nível 2 ARCFOX T1"
+                  class="smart-card__img"
+                />
+                <div class="smart-card__scrim" aria-hidden="true"></div>
+              </div>
+
+              <div class="smart-card__topbar">
+                <span class="smart-card__step">05 / 06</span>
+                <span class="smart-card__pill">Level 2 Combined ADAS</span>
+              </div>
+
+              <div class="smart-card__bottom">
+                <div class="smart-card__copy">
+                  <span class="smart-card__kicker">Inteligência Elevada • Proteção Contínua</span>
+                  <h3 class="smart-card__heading">Assistência de Condução Combinada Nível 2</h3>
+                  <p class="smart-card__desc">
+                    Segurança ativa sempre ao seu lado com sensores e radares de alta precisão monitorando cada trajeto.
+                  </p>
+                </div>
+
+                <div class="smart-card__metrics" aria-label="Recursos ADAS Nível 2">
+                  <div class="smart-metric">
+                    <strong class="smart-metric__val">12 Funções</strong>
+                    <span class="smart-metric__lbl">Segurança Ativa de Condução</span>
+                  </div>
+                  <div class="smart-metric">
+                    <strong class="smart-metric__val">6 Funções</strong>
+                    <span class="smart-metric__lbl">Assistência Inteligente de Cruzeiro</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- CARD 06: 7 Driving Modes for Every Journey -->
+          <div class="smart-stack-slot" data-stack-index="5">
+            <article class="smart-card" style="--stack-idx: 5;">
+              <div class="smart-card__media">
+                <img
+                  src="assets/smart-tech/tech-06.jpg"
+                  alt="7 Modos de Condução com Memória Inteligente ARCFOX T1"
+                  class="smart-card__img"
+                />
+                <div class="smart-card__scrim" aria-hidden="true"></div>
+              </div>
+
+              <div class="smart-card__topbar">
+                <span class="smart-card__step">06 / 06</span>
+                <span class="smart-card__pill">Adaptive Drive &amp; Smart Memory</span>
+              </div>
+
+              <div class="smart-card__bottom">
+                <div class="smart-card__copy">
+                  <span class="smart-card__kicker">Memória Inteligente de Preferências</span>
+                  <h3 class="smart-card__heading">7 Modos de Condução para Cada Jornada</h3>
+                  <p class="smart-card__desc">
+                    A Memória Inteligente aprende suas preferências ao volante, tornando o compartilhamento em família simples e imediato.
+                  </p>
+                </div>
+
+                <div class="smart-card__modes" aria-label="7 Modos de Condução">
+                  <span class="smart-mode-chip">Comfort</span>
+                  <span class="smart-mode-chip">Eco</span>
+                  <span class="smart-mode-chip">Sport</span>
+                  <span class="smart-mode-chip">Custom</span>
+                  <span class="smart-mode-chip">Ultra Eco</span>
+                  <span class="smart-mode-chip">Wet</span>
+                  <span class="smart-mode-chip is-highlight">Adaptive</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 8: QUADRO COMPARATIVO (ARCFOX T1 vs. ELÉTRICOS À VENDA NO BRASIL)
+         ========================================== -->
+    <section class="cmp-sec" id="comparativo" aria-labelledby="cmpTitle">
+      <div class="cmp-sec__container">
+
+        <!-- Editorial Header -->
+        <div class="cmp-sec__header">
+          <span class="cmp-sec__eyebrow">/// COMPARATIVO DE CATEGORIA</span>
+          <h2 class="cmp-sec__title" id="cmpTitle">
+            ARCFOX T1 <span>Comparado com os Elétricos à Venda no Brasil</span>
+          </h2>
+          <p class="cmp-sec__subtitle">
+            Mais espaço de porta-malas, maior entre-eixos e a recarga ultrarrápida mais potente do segmento. Clique em qualquer modelo abaixo ou filtre por categoria para comparar lado a lado.
+          </p>
+        </div>
+
+        <!-- 3 Key Leadership Highlights of the ARCFOX T1 -->
+        <div class="cmp-highlights">
+          <div class="cmp-highlight-card">
+            <span class="cmp-highlight-card__tag">Líder em Recarga Rápida</span>
+            <div class="cmp-highlight-card__val">16 min <span>• 140 kW</span></div>
+            <p class="cmp-highlight-card__desc">Até o dobro de potência de recarga DC em relação aos concorrentes diretos.</p>
+          </div>
+          <div class="cmp-highlight-card">
+            <span class="cmp-highlight-card__tag">Líder em Porta-Malas</span>
+            <div class="cmp-highlight-card__val">459 L <span>de capacidade</span></div>
+            <p class="cmp-highlight-card__desc">Até +224 litros a mais que a concorrência, superando categorias superiores.</p>
+          </div>
+          <div class="cmp-highlight-card">
+            <span class="cmp-highlight-card__tag">Líder em Espaço Interno</span>
+            <div class="cmp-highlight-card__val">2.770 mm <span>entre-eixos</span></div>
+            <p class="cmp-highlight-card__desc">Maior comprimento (4.337 mm) e maior largura (1.860 mm) para conforto real.</p>
+          </div>
+        </div>
+
+        <!-- Interactive Filter & Live 1x1 Delta Toolbar -->
+        <div class="cmp-toolbar">
+          <div class="cmp-filters" role="tablist" aria-label="Filtrar colunas do comparativo">
+            <button type="button" class="cmp-filter-btn is-active" data-cmp-filter="all">
+              Visão Completa
+            </button>
+            <button type="button" class="cmp-filter-btn" data-cmp-filter="perf">
+              Motor &amp; Recarga
+            </button>
+            <button type="button" class="cmp-filter-btn" data-cmp-filter="space">
+              Porta-Malas &amp; Entre-Eixos
+            </button>
+            <button type="button" class="cmp-filter-btn" data-cmp-filter="dims">
+              Dimensões Externas
+            </button>
+          </div>
+
+          <div class="cmp-delta-pill" id="cmpDeltaBanner">
+            <span class="cmp-delta-pill__dot"></span>
+            <span id="cmpDeltaText">
+              <strong>Arcfox T1 vs. BYD Dolphin Mini:</strong> +224 L de porta-malas • Recarga 14 min mais rápida (140 kW) • +270 mm de entre-eixos
+            </span>
+          </div>
+        </div>
+
+        <!-- Main Comparison Table Card -->
+        <div class="cmp-board-wrap">
+          <div class="cmp-board" id="cmpBoard" data-active-filter="all">
+            <table class="cmp-table">
+              <thead>
+                <tr>
+                  <th class="cmp-col-model">Modelo</th>
+                  <th data-col-group="perf">Motor</th>
+                  <th data-col-group="perf">Potência</th>
+                  <th data-col-group="perf">Autonomia</th>
+                  <th data-col-group="perf" class="cmp-col-key">Recarga Rápida</th>
+                  <th data-col-group="space" class="cmp-col-key">Porta-Malas</th>
+                  <th data-col-group="dims">Comprimento</th>
+                  <th data-col-group="dims">Largura</th>
+                  <th data-col-group="dims">Altura</th>
+                  <th data-col-group="space" class="cmp-col-key">Entre-Eixos</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- PROTAGONIST ROW: ARCFOX T1 (TOP HIGHLIGHTED) -->
+                <tr class="cmp-row cmp-row--hero">
+                  <td class="cmp-cell-model">
+                    <div class="cmp-model-hero">
+                      <img
+                        src="assets/car-blue-side.webp"
+                        alt="Arcfox T1"
+                        class="cmp-model-hero__thumb"
+                      />
+                      <div class="cmp-model-hero__info">
+                        <span class="cmp-model-hero__badge">Destaque • BAIC</span>
+                        <strong class="cmp-model-hero__name">Arcfox T1</strong>
+                      </div>
+                    </div>
+                  </td>
+                  <td data-col-group="perf">100% elétrico (BEV)</td>
+                  <td data-col-group="perf">95 cv</td>
+                  <td data-col-group="perf"><strong>até 300 km</strong></td>
+                  <td data-col-group="perf" class="cmp-col-key">
+                    <span class="cmp-win-pill">16 min - 140 kW</span>
+                  </td>
+                  <td data-col-group="space" class="cmp-col-key">
+                    <span class="cmp-win-pill">459 L</span>
+                  </td>
+                  <td data-col-group="dims">
+                    <span class="cmp-win-text">4.337 mm</span>
+                  </td>
+                  <td data-col-group="dims">
+                    <span class="cmp-win-text">1.860 mm</span>
+                  </td>
+                  <td data-col-group="dims">1.572 mm</td>
+                  <td data-col-group="space" class="cmp-col-key">
+                    <span class="cmp-win-pill">2.770 mm</span>
+                  </td>
+                </tr>
+
+                <!-- COMPETITOR 1: BYD Dolphin Mini -->
+                <tr
+                  class="cmp-row cmp-row--competitor is-selected"
+                  data-competitor="BYD Dolphin Mini"
+                  data-delta="<strong>Arcfox T1 vs. BYD Dolphin Mini:</strong> +224 L de porta-malas (quase o dobro) • Recarga 14 min mais rápida (+52 kW) • +270 mm de entre-eixos"
+                >
+                  <td class="cmp-cell-model">
+                    <div class="cmp-model-comp">
+                      <span class="cmp-model-comp__radio" aria-hidden="true"></span>
+                      <span class="cmp-model-comp__name">BYD Dolphin Mini</span>
+                    </div>
+                  </td>
+                  <td data-col-group="perf">100% elétrico (BEV)</td>
+                  <td data-col-group="perf">95 cv</td>
+                  <td data-col-group="perf">~300 km</td>
+                  <td data-col-group="perf" class="cmp-col-key">30 min - 88 kW</td>
+                  <td data-col-group="space" class="cmp-col-key">235 L</td>
+                  <td data-col-group="dims">3.780 mm</td>
+                  <td data-col-group="dims">1.710 mm</td>
+                  <td data-col-group="dims">1.540 mm</td>
+                  <td data-col-group="space" class="cmp-col-key">2.500 mm</td>
+                </tr>
+
+                <!-- COMPETITOR 2: BYD Dolphin -->
+                <tr
+                  class="cmp-row cmp-row--competitor"
+                  data-competitor="BYD Dolphin"
+                  data-delta="<strong>Arcfox T1 vs. BYD Dolphin:</strong> +114 L a mais de porta-malas • Recarga 14 min mais rápida (140 kW vs 88 kW) • +90 mm mais largo e +70 mm de entre-eixos"
+                >
+                  <td class="cmp-cell-model">
+                    <div class="cmp-model-comp">
+                      <span class="cmp-model-comp__radio" aria-hidden="true"></span>
+                      <span class="cmp-model-comp__name">BYD Dolphin</span>
+                    </div>
+                  </td>
+                  <td data-col-group="perf">100% elétrico (BEV)</td>
+                  <td data-col-group="perf">204 cv</td>
+                  <td data-col-group="perf">~300 km</td>
+                  <td data-col-group="perf" class="cmp-col-key">30 min - 88 kW</td>
+                  <td data-col-group="space" class="cmp-col-key">345 L</td>
+                  <td data-col-group="dims">4.290 mm</td>
+                  <td data-col-group="dims">1.770 mm</td>
+                  <td data-col-group="dims">1.570 mm</td>
+                  <td data-col-group="space" class="cmp-col-key">2.700 mm</td>
+                </tr>
+
+                <!-- COMPETITOR 3: Geely EX2 -->
+                <tr
+                  class="cmp-row cmp-row--competitor"
+                  data-competitor="Geely EX2"
+                  data-delta="<strong>Arcfox T1 vs. Geely EX2:</strong> +84 L a mais de porta-malas • Dobro de potência de recarga (140 kW vs 70 kW) • +202 mm mais comprido e +120 mm de entre-eixos"
+                >
+                  <td class="cmp-cell-model">
+                    <div class="cmp-model-comp">
+                      <span class="cmp-model-comp__radio" aria-hidden="true"></span>
+                      <span class="cmp-model-comp__name">Geely EX2</span>
+                    </div>
+                  </td>
+                  <td data-col-group="perf">100% elétrico (BEV)</td>
+                  <td data-col-group="perf">116 cv</td>
+                  <td data-col-group="perf">~300 km</td>
+                  <td data-col-group="perf" class="cmp-col-key">21 min - 70 kW</td>
+                  <td data-col-group="space" class="cmp-col-key">375 L</td>
+                  <td data-col-group="dims">4.135 mm</td>
+                  <td data-col-group="dims">1.805 mm</td>
+                  <td data-col-group="dims">1.580 mm</td>
+                  <td data-col-group="space" class="cmp-col-key">2.650 mm</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Mobile Stacked Comparison Cards (Replaces horizontal scroll table on mobile <= 768px) -->
+        <div class="cmp-mobile-stack" id="cmpMobileStack" aria-label="Comparativo em Cards para Mobile">
+
+          <!-- MOBILE CARD 01: ARCFOX T1 PROTAGONIST -->
+          <div class="cmp-mob-slot" data-mob-stack-index="0">
+            <article class="cmp-mob-card cmp-mob-card--hero" style="--mob-idx: 0;">
+              <div class="cmp-mob-card__top">
+                <span class="cmp-mob-card__step">01 / 04 • Protagonista</span>
+                <span class="cmp-mob-card__badge">Destaque • BAIC</span>
+              </div>
+              <div class="cmp-mob-card__hero-head">
+                <img src="assets/car-blue-side.webp" alt="Arcfox T1" class="cmp-mob-card__car" />
+                <div>
+                  <h3 class="cmp-mob-card__title">Arcfox T1</h3>
+                  <p class="cmp-mob-card__sub">100% Elétrico (BEV) • Líder da Categoria</p>
+                </div>
+              </div>
+              <div class="cmp-mob-card__grid">
+                <div class="cmp-mob-spec is-win">
+                  <span class="cmp-mob-spec__lbl">Recarga Rápida</span>
+                  <strong class="cmp-mob-spec__val">16 min • 140 kW</strong>
+                </div>
+                <div class="cmp-mob-spec is-win">
+                  <span class="cmp-mob-spec__lbl">Porta-Malas</span>
+                  <strong class="cmp-mob-spec__val">459 Litros</strong>
+                </div>
+                <div class="cmp-mob-spec is-win">
+                  <span class="cmp-mob-spec__lbl">Entre-Eixos</span>
+                  <strong class="cmp-mob-spec__val">2.770 mm</strong>
+                </div>
+                <div class="cmp-mob-spec">
+                  <span class="cmp-mob-spec__lbl">Potência / Autonomia</span>
+                  <strong class="cmp-mob-spec__val">95 cv • até 300 km</strong>
+                </div>
+                <div class="cmp-mob-spec">
+                  <span class="cmp-mob-spec__lbl">Comprimento × Largura</span>
+                  <strong class="cmp-mob-spec__val">4.337 × 1.860 mm</strong>
+                </div>
+                <div class="cmp-mob-spec">
+                  <span class="cmp-mob-spec__lbl">Altura</span>
+                  <strong class="cmp-mob-spec__val">1.572 mm</strong>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- MOBILE CARD 02: ARCFOX T1 vs. BYD DOLPHIN MINI -->
+          <div class="cmp-mob-slot" data-mob-stack-index="1">
+            <article class="cmp-mob-card" style="--mob-idx: 1;">
+              <div class="cmp-mob-card__top">
+                <span class="cmp-mob-card__step">02 / 04 • Comparativo 1x1</span>
+                <span class="cmp-mob-card__vs-pill">T1 vs. Dolphin Mini</span>
+              </div>
+              <h3 class="cmp-mob-card__comp-title">Arcfox T1 <span>vs.</span> BYD Dolphin Mini</h3>
+              <p class="cmp-mob-card__delta">
+                <strong>Vantagem T1:</strong> +224 L de porta-malas (quase o dobro) • Recarga 14 min mais rápida (+52 kW) • +270 mm de entre-eixos.
+              </p>
+              <div class="cmp-mob-rows">
+                <div class="cmp-mob-row cmp-mob-row--head">
+                  <span>Especificação</span>
+                  <span class="is-t1">Arcfox T1</span>
+                  <span>Dolphin Mini</span>
+                </div>
+                <div class="cmp-mob-row">
+                  <span>Recarga Rápida</span>
+                  <strong class="is-t1">16 min (140 kW)</strong>
+                  <span>30 min (88 kW)</span>
+                </div>
+                <div class="cmp-mob-row">
+                  <span>Porta-Malas</span>
+                  <strong class="is-t1">459 L</strong>
+                  <span>235 L</span>
+                </div>
+                <div class="cmp-mob-row">
+                  <span>Entre-Eixos</span>
+                  <strong class="is-t1">2.770 mm</strong>
+                  <span>2.500 mm</span>
+                </div>
+                <div class="cmp-mob-row">
+                  <span>Potência</span>
+                  <strong class="is-t1">95 cv</strong>
+                  <span>95 cv</span>
+                </div>
+                <div class="cmp-mob-row">
+                  <span>Autonomia</span>
+                  <strong class="is-t1">até 300 km</strong>
+                  <span>~300 km</span>
+                </div>
+                <div class="cmp-mob-row">
+                  <span>Comprimento</span>
+                  <strong class="is-t1">4.337 mm</strong>
+                  <span>3.780 mm</span>
+                </div>
+                <div class="cmp-mob-row">
+                  <span>Largura</span>
+                  <strong class="is-t1">1.860 mm</strong>
+                  <span>1.710 mm</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- MOBILE CARD 03: ARCFOX T1 vs. BYD DOLPHIN -->
+          <div class="cmp-mob-slot" data-mob-stack-index="2">
+            <article class="cmp-mob-card" style="--mob-idx: 2;">
+              <div class="cmp-mob-card__top">
+                <span class="cmp-mob-card__step">03 / 04 • Comparativo 1x1</span>
+                <span class="cmp-mob-card__vs-pill">T1 vs. BYD Dolphin</span>
+              </div>
+              <h3 class="cmp-mob-card__comp-title">Arcfox T1 <span>vs.</span> BYD Dolphin</h3>
+              <p class="cmp-mob-card__delta">
+                <strong>Vantagem T1:</strong> +114 L a mais de porta-malas • Recarga 14 min mais rápida (140 kW vs 88 kW) • +90 mm mais largo e +70 mm de entre-eixos.
+              </p>
+              <div class="cmp-mob-rows">
+                <div class="cmp-mob-row cmp-mob-row--head">
+                  <span>Especificação</span>
+                  <span class="is-t1">Arcfox T1</span>
+                  <span>BYD Dolphin</span>
+                </div>
+                <div class="cmp-mob-row">
+                  <span>Recarga Rápida</span>
+                  <strong class="is-t1">16 min (140 kW)</strong>
+                  <span>30 min (88 kW)</span>
+                </div>
+                <div class="cmp-mob-row">
+                  <span>Porta-Malas</span>
+                  <strong class="is-t1">459 L</strong>
+                  <span>345 L</span>
+                </div>
+                <div class="cmp-mob-row">
+                  <span>Entre-Eixos</span>
+                  <strong class="is-t1">2.770 mm</strong>
+                  <span>2.700 mm</span>
+                </div>
+                <div class="cmp-mob-row">
+                  <span>Potência</span>
+                  <strong class="is-t1">95 cv</strong>
+                  <span>204 cv</span>
+                </div>
+                <div class="cmp-mob-row">
+                  <span>Autonomia</span>
+                  <strong class="is-t1">até 300 km</strong>
+                  <span>~300 km</span>
+                </div>
+                <div class="cmp-mob-row">
+                  <span>Comprimento</span>
+                  <strong class="is-t1">4.337 mm</strong>
+                  <span>4.290 mm</span>
+                </div>
+                <div class="cmp-mob-row">
+                  <span>Largura</span>
+                  <strong class="is-t1">1.860 mm</strong>
+                  <span>1.770 mm</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- MOBILE CARD 04: ARCFOX T1 vs. GEELY EX2 -->
+          <div class="cmp-mob-slot" data-mob-stack-index="3">
+            <article class="cmp-mob-card" style="--mob-idx: 3;">
+              <div class="cmp-mob-card__top">
+                <span class="cmp-mob-card__step">04 / 04 • Comparativo 1x1</span>
+                <span class="cmp-mob-card__vs-pill">T1 vs. Geely EX2</span>
+              </div>
+              <h3 class="cmp-mob-card__comp-title">Arcfox T1 <span>vs.</span> Geely EX2</h3>
+              <p class="cmp-mob-card__delta">
+                <strong>Vantagem T1:</strong> +84 L a mais de porta-malas • Dobro de potência de recarga (140 kW vs 70 kW) • +202 mm mais comprido e +120 mm de entre-eixos.
+              </p>
+              <div class="cmp-mob-rows">
+                <div class="cmp-mob-row cmp-mob-row--head">
+                  <span>Especificação</span>
+                  <span class="is-t1">Arcfox T1</span>
+                  <span>Geely EX2</span>
+                </div>
+                <div class="cmp-mob-row">
+                  <span>Recarga Rápida</span>
+                  <strong class="is-t1">16 min (140 kW)</strong>
+                  <span>21 min (70 kW)</span>
+                </div>
+                <div class="cmp-mob-row">
+                  <span>Porta-Malas</span>
+                  <strong class="is-t1">459 L</strong>
+                  <span>375 L</span>
+                </div>
+                <div class="cmp-mob-row">
+                  <span>Entre-Eixos</span>
+                  <strong class="is-t1">2.770 mm</strong>
+                  <span>2.650 mm</span>
+                </div>
+                <div class="cmp-mob-row">
+                  <span>Potência</span>
+                  <strong class="is-t1">95 cv</strong>
+                  <span>116 cv</span>
+                </div>
+                <div class="cmp-mob-row">
+                  <span>Autonomia</span>
+                  <strong class="is-t1">até 300 km</strong>
+                  <span>~300 km</span>
+                </div>
+                <div class="cmp-mob-row">
+                  <span>Comprimento</span>
+                  <strong class="is-t1">4.337 mm</strong>
+                  <span>4.135 mm</span>
+                </div>
+                <div class="cmp-mob-row">
+                  <span>Largura</span>
+                  <strong class="is-t1">1.860 mm</strong>
+                  <span>1.805 mm</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </div>
+
+        <!-- Official Footnote Disclaimer -->
+        <div class="cmp-footnote">
+          <span class="cmp-footnote__icon" aria-hidden="true">i</span>
+          <p class="cmp-footnote__text">
+            Dados divulgados por cada fabricante para o Brasil. Autonomia dos elétricos: estimativa de uso; o número oficial de cada modelo é o da homologação do Inmetro. Preço e condições do Arcfox T1 serão divulgados pela BAIC no lançamento.
+          </p>
+        </div>
+
+        <!-- CTA Bar below the comparison board -->
+        <div class="cmp-cta">
+          <div class="cmp-cta__copy">
+            <h3 class="cmp-cta__title">Compare de perto. Sinta a diferença ao volante.</h3>
+            <p class="cmp-cta__sub">Agende seu test drive do ARCFOX T1 na BAIC V12 ou tire suas dúvidas com um especialista.</p>
+          </div>
+          <div class="cmp-cta__actions">
+            <button type="button" class="btn-framer btn-framer--dark" data-open-modal>
+              <span class="btn-framer__label">Agendar Test Drive</span>
+              <span class="btn-framer__badge" aria-hidden="true">
+                <svg class="btn-framer__arrow btn-framer__arrow--primary" viewBox="0 0 16 16" fill="none">
+                  <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <svg class="btn-framer__arrow btn-framer__arrow--secondary" viewBox="0 0 16 16" fill="none">
+                  <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </button>
+            <a href="https://wa.me/5561927400099?text=Ol%C3%A1!%20Tenho%20interesse%20no%20ARCFOX%20T1." target="_blank" rel="noopener noreferrer" class="cmp-cta__ghost">
+              Falar no WhatsApp
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 9: GALERIA BENTO EM SCROLL HORIZONTAL + VISUALIZADOR EXPANDIDO
+         ========================================== -->
+    <section class="bento-gal-sec" id="galeria" aria-label="Galeria Interativa ARCFOX T1">
+      <div class="bento-gal-sec__sticky">
+
+        <!-- Section Header + Interactive Hint + Navigation Controls -->
+        <div class="bento-gal-sec__top">
+          <div class="bento-gal-sec__title-group">
+            <span class="bento-gal-sec__eyebrow">Galeria de Fotos • Design & Lifestyle</span>
+            <h2 class="bento-gal-sec__title">
+              Cada ângulo do <strong>ARCFOX T1</strong> em detalhes.
+            </h2>
+          </div>
+
+          <div class="bento-gal-sec__controls">
+            <div class="bento-gal-sec__hint">
+              <span class="bento-gal-sec__hint-dot" aria-hidden="true"></span>
+              <span>Clique em qualquer foto para ampliar e navegar pela galeria</span>
+            </div>
+
+            <div class="bento-gal-sec__nav" aria-label="Navegação da Galeria">
+              <button type="button" class="bento-gal-sec__nav-btn" id="bentoPrevBtn" aria-label="Deslizar galeria para a esquerda">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M12.5 15L7.5 10L12.5 5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button type="button" class="bento-gal-sec__nav-btn" id="bentoNextBtn" aria-label="Deslizar galeria para a direita">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M7.5 15L12.5 10L7.5 5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Horizontal Scroll Stage (Glides Right-to-Left on Scroll) -->
+        <div class="bento-gal-sec__stage">
+          <div class="bento-gal-track" id="bentoGalleryTrack">
+
+            <!-- 9-Column × 3-Row Large Bento Grid (13 Official Photos in Fixed Slots) -->
+            <div class="bento-grid" id="bentoInteractiveGrid">
+
+              <!-- 01. Col 1..2, Row 1 (2x1 Horizontal) -->
+              <article
+                class="bento-item"
+                data-gal-index="0"
+                style="--c1: 1; --c2: 3; --r1: 1; --r2: 2;"
+                role="button"
+                tabindex="0"
+                aria-label="Ampliar foto: Presença Urbana Sofisticada"
+              >
+                <div class="bento-item__card">
+                  <img
+                    src="assets/gallery/gal-10.jpg"
+                    alt="ARCFOX T1 Lifestyle Urbano"
+                    class="bento-item__img"
+                    loading="lazy"
+                  />
+                  <div class="bento-item__shade"></div>
+                  <span class="bento-item__badge">Clique para ampliar</span>
+                  <div class="bento-item__caption">
+                    <span class="bento-item__tag">Exterior • Lifestyle</span>
+                    <h3 class="bento-item__name">Presença Urbana Sofisticada</h3>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 02. Col 1, Row 2 (1x1 Square) -->
+              <article
+                class="bento-item"
+                data-gal-index="1"
+                style="--c1: 1; --c2: 2; --r1: 2; --r2: 3;"
+                role="button"
+                tabindex="0"
+                aria-label="Ampliar foto: Ergonomia e Praticidade"
+              >
+                <div class="bento-item__card">
+                  <img
+                    src="assets/gallery/gal-04.jpg"
+                    alt="Console Central com Suporte para Smartphone"
+                    class="bento-item__img"
+                    loading="lazy"
+                  />
+                  <div class="bento-item__shade"></div>
+                  <span class="bento-item__badge">Clique para ampliar</span>
+                  <div class="bento-item__caption">
+                    <span class="bento-item__tag">Console Inteligente</span>
+                    <h3 class="bento-item__name">Ergonomia & Praticidade</h3>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 03. Col 2, Row 2 (1x1 Square) -->
+              <article
+                class="bento-item"
+                data-gal-index="2"
+                style="--c1: 2; --c2: 3; --r1: 2; --r2: 3;"
+                role="button"
+                tabindex="0"
+                aria-label="Ampliar foto: Organização Inteligente"
+              >
+                <div class="bento-item__card">
+                  <img
+                    src="assets/gallery/gal-05.jpg"
+                    alt="Compartimento Central Amplo e Porta-Copos Duplo"
+                    class="bento-item__img"
+                    loading="lazy"
+                  />
+                  <div class="bento-item__shade"></div>
+                  <span class="bento-item__badge">Clique para ampliar</span>
+                  <div class="bento-item__caption">
+                    <span class="bento-item__tag">Porta-Objetos</span>
+                    <h3 class="bento-item__name">Organização Inteligente</h3>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 04. Col 1..2, Row 3 (2x1 Horizontal) -->
+              <article
+                class="bento-item"
+                data-gal-index="3"
+                style="--c1: 1; --c2: 3; --r1: 3; --r2: 4;"
+                role="button"
+                tabindex="0"
+                aria-label="Ampliar foto: Cockpit Digital 15,6 + 8,8 polegadas"
+              >
+                <div class="bento-item__card">
+                  <img
+                    src="assets/gallery/gal-08.jpg"
+                    alt="Cockpit Digital ARCFOX T1 com Multimídia 15,6 polegadas"
+                    class="bento-item__img"
+                    loading="lazy"
+                  />
+                  <div class="bento-item__shade"></div>
+                  <span class="bento-item__badge">Clique para ampliar</span>
+                  <div class="bento-item__caption">
+                    <span class="bento-item__tag">Tecnologia • Cabine</span>
+                    <h3 class="bento-item__name">Cockpit Digital 15,6" + 8,8"</h3>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 05. Col 3, Row 1 (1x1 Square) -->
+              <article
+                class="bento-item"
+                data-gal-index="4"
+                style="--c1: 3; --c2: 4; --r1: 1; --r2: 2;"
+                role="button"
+                tabindex="0"
+                aria-label="Ampliar foto: Nichos Modulares de Porta"
+              >
+                <div class="bento-item__card">
+                  <img
+                    src="assets/gallery/gal-06.jpg"
+                    alt="Nichos Laterais de Porta ARCFOX T1"
+                    class="bento-item__img"
+                    loading="lazy"
+                  />
+                  <div class="bento-item__shade"></div>
+                  <span class="bento-item__badge">Clique para ampliar</span>
+                  <div class="bento-item__caption">
+                    <span class="bento-item__tag">Acabamento Interno</span>
+                    <h3 class="bento-item__name">Nichos Modulares de Porta</h3>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 06. Col 4, Row 1 (1x1 Square) -->
+              <article
+                class="bento-item"
+                data-gal-index="5"
+                style="--c1: 4; --c2: 5; --r1: 1; --r2: 2;"
+                role="button"
+                tabindex="0"
+                aria-label="Ampliar foto: Detalhes que Encantam"
+              >
+                <div class="bento-item__card">
+                  <img
+                    src="assets/gallery/gal-07.jpg"
+                    alt="Bancos Bicolores e Teto Panorâmico ARCFOX T1"
+                    class="bento-item__img"
+                    loading="lazy"
+                  />
+                  <div class="bento-item__shade"></div>
+                  <span class="bento-item__badge">Clique para ampliar</span>
+                  <div class="bento-item__caption">
+                    <span class="bento-item__tag">Design Bicolor</span>
+                    <h3 class="bento-item__name">Detalhes que Encantam</h3>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 07. Col 5, Row 1 (1x1 Square) -->
+              <article
+                class="bento-item"
+                data-gal-index="6"
+                style="--c1: 5; --c2: 6; --r1: 1; --r2: 2;"
+                role="button"
+                tabindex="0"
+                aria-label="Ampliar foto: Espaço Modular de Carga"
+              >
+                <div class="bento-item__card">
+                  <img
+                    src="assets/gallery/gal-03.jpg"
+                    alt="Bancos Rebatíveis para Equipamentos de Lazer"
+                    class="bento-item__img"
+                    loading="lazy"
+                  />
+                  <div class="bento-item__shade"></div>
+                  <span class="bento-item__badge">Clique para ampliar</span>
+                  <div class="bento-item__caption">
+                    <span class="bento-item__tag">Versatilidade</span>
+                    <h3 class="bento-item__name">Espaço Modular de Carga</h3>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 08. Col 3..4, Row 2..3 (2x2 Feature Card) -->
+              <article
+                class="bento-item"
+                data-gal-index="7"
+                style="--c1: 3; --c2: 5; --r1: 2; --r2: 4;"
+                role="button"
+                tabindex="0"
+                aria-label="Ampliar foto: Bancos Reclináveis e Entre-Eixos de 2.770 mm"
+              >
+                <div class="bento-item__card">
+                  <img
+                    src="assets/gallery/gal-01.jpg"
+                    alt="Conforto Interno Familiar ARCFOX T1"
+                    class="bento-item__img"
+                    loading="lazy"
+                  />
+                  <div class="bento-item__shade"></div>
+                  <span class="bento-item__badge">Clique para ampliar</span>
+                  <div class="bento-item__caption">
+                    <span class="bento-item__tag">Conforto First-Class</span>
+                    <h3 class="bento-item__name">Bancos Reclináveis & Entre-Eixos de 2.770 mm</h3>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 09. Col 5, Row 2..3 (1x2 Vertical Card) -->
+              <article
+                class="bento-item"
+                data-gal-index="8"
+                style="--c1: 5; --c2: 6; --r1: 2; --r2: 4;"
+                role="button"
+                tabindex="0"
+                aria-label="Ampliar foto: Teto Panorâmico com Isolamento Térmico"
+              >
+                <div class="bento-item__card">
+                  <img
+                    src="assets/gallery/gal-12.jpg"
+                    alt="Teto Panorâmico de Vidro ARCFOX T1"
+                    class="bento-item__img"
+                    loading="lazy"
+                  />
+                  <div class="bento-item__shade"></div>
+                  <span class="bento-item__badge">Clique para ampliar</span>
+                  <div class="bento-item__caption">
+                    <span class="bento-item__tag">Sky-View</span>
+                    <h3 class="bento-item__name">Teto Panorâmico com Isolamento Térmico</h3>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 10. Col 6..7, Row 1..2 (2x2 Feature Action) -->
+              <article
+                class="bento-item"
+                data-gal-index="9"
+                style="--c1: 6; --c2: 8; --r1: 1; --r2: 3;"
+                role="button"
+                tabindex="0"
+                aria-label="Ampliar foto: Condução Silenciosa e Autonomia de até 300 km"
+              >
+                <div class="bento-item__card">
+                  <img
+                    src="assets/gallery/gal-11.jpg"
+                    alt="ARCFOX T1 em Movimento na Estrada Costeira"
+                    class="bento-item__img"
+                    loading="lazy"
+                  />
+                  <div class="bento-item__shade"></div>
+                  <span class="bento-item__badge">Clique para ampliar</span>
+                  <div class="bento-item__caption">
+                    <span class="bento-item__tag">Performance 100% BEV</span>
+                    <h3 class="bento-item__name">Condução Silenciosa e Autonomia de até 300 km</h3>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 11. Col 6..7, Row 3 (2x1 Horizontal) -->
+              <article
+                class="bento-item"
+                data-gal-index="10"
+                style="--c1: 6; --c2: 8; --r1: 3; --r2: 4;"
+                role="button"
+                tabindex="0"
+                aria-label="Ampliar foto: Assinatura Luminosa Traseira em LED 3D"
+              >
+                <div class="bento-item__card">
+                  <img
+                    src="assets/gallery/gal-09.jpg"
+                    alt="Design Traseiro e Rodas Diamantadas ARCFOX T1"
+                    class="bento-item__img"
+                    loading="lazy"
+                  />
+                  <div class="bento-item__shade"></div>
+                  <span class="bento-item__badge">Clique para ampliar</span>
+                  <div class="bento-item__caption">
+                    <span class="bento-item__tag">Exterior • Aerodinâmica</span>
+                    <h3 class="bento-item__name">Assinatura Luminosa Traseira em LED 3D</h3>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 12. Col 8..9, Row 1 (2x1 Horizontal) -->
+              <article
+                class="bento-item"
+                data-gal-index="11"
+                style="--c1: 8; --c2: 10; --r1: 1; --r2: 2;"
+                role="button"
+                tabindex="0"
+                aria-label="Ampliar foto: Luminosidade Natural em Toda a Cabine"
+              >
+                <div class="bento-item__card">
+                  <img
+                    src="assets/gallery/gal-02.jpg"
+                    alt="Amplitude Interna e Teto Solar ARCFOX T1"
+                    class="bento-item__img"
+                    loading="lazy"
+                  />
+                  <div class="bento-item__shade"></div>
+                  <span class="bento-item__badge">Clique para ampliar</span>
+                  <div class="bento-item__caption">
+                    <span class="bento-item__tag">Bem-Estar a Bordo</span>
+                    <h3 class="bento-item__name">Luminosidade Natural em Toda a Cabine</h3>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 13. Col 8..9, Row 2..3 (2x2 Feature Card) -->
+              <article
+                class="bento-item"
+                data-gal-index="12"
+                style="--c1: 8; --c2: 10; --r1: 2; --r2: 4;"
+                role="button"
+                tabindex="0"
+                aria-label="Ampliar foto: Porta-Malas Amplo para Todas as Viagens"
+              >
+                <div class="bento-item__card">
+                  <img
+                    src="assets/gallery/gal-13.jpg"
+                    alt="Porta-Malas de 459 Litros do ARCFOX T1"
+                    class="bento-item__img"
+                    loading="lazy"
+                  />
+                  <div class="bento-item__shade"></div>
+                  <span class="bento-item__badge">Clique para ampliar</span>
+                  <div class="bento-item__caption">
+                    <span class="bento-item__tag">Capacidade Líder • 459 L</span>
+                    <h3 class="bento-item__name">Porta-Malas Amplo para Todas as Viagens</h3>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Scroll Progress Indicator -->
+        <div class="bento-gal-sec__footer">
+          <div class="bento-gal-sec__progress-wrap">
+            <span class="bento-gal-sec__progress-label">Role para explorar a galeria</span>
+            <div class="bento-gal-sec__progress-track">
+              <div class="bento-gal-sec__progress-bar" id="bentoGalleryProgressBar"></div>
+            </div>
+            <span class="bento-gal-sec__progress-pct" id="bentoGalleryPct">13 Fotos • 0%</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 10: PERGUNTAS FREQUENTES (FAQ INTERATIVO)
+         ========================================== -->
+    <section class="faq-sec" id="faq" aria-labelledby="faqTitle">
+      <div class="faq-sec__container">
+        <header class="faq-sec__header">
+          <div class="studio-badge">
+            <span class="studio-badge__dot" aria-hidden="true"></span>
+            <span class="studio-badge__text">BAIC V12 • PERGUNTAS E RESPOSTAS</span>
+          </div>
+
+          <h2 class="faq-sec__title" id="faqTitle">
+            Tire suas dúvidas sobre o <span>ARCFOX T1.</span>
+          </h2>
+
+          <p class="faq-sec__subtitle">
+            Reunimos as principais informações sobre chegada ao Brasil, autonomia, recarga rápida, espaço interno e comparativo com a categoria.
+          </p>
+        </header>
+
+        <div class="faq-list" id="faqAccordion">
+          <!-- FAQ Item 1 (Ideia 1 do usuário) -->
+          <article class="faq-item is-open">
+            <button type="button" class="faq-item__trigger" aria-expanded="true">
+              <span class="faq-item__num">01</span>
+              <span class="faq-item__question">Qual a previsão de chegada do Arcfox T1 no Brasil?</span>
+              <span class="faq-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12h14" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-item__panel">
+              <div class="faq-item__content">
+                <p>
+                  O ARCFOX T1 chega ao Brasil em novembro de 2026. Venha conhecer o carro, agende o seu teste drive!
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- FAQ Item 2 (Ideia 2 do usuário) -->
+          <article class="faq-item">
+            <button type="button" class="faq-item__trigger" aria-expanded="false">
+              <span class="faq-item__num">02</span>
+              <span class="faq-item__question">Como o Arcfox T1 se compara ao concorrente?</span>
+              <span class="faq-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12h14" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-item__panel">
+              <div class="faq-item__content">
+                <p>
+                  O Arcfox T1 tem 95 cv e bateria de 42 kWh, contra os mesmos 95 cv e 44,9 kWh do concorrente, que custa R$ 149.990 e faz 291 km pelo Inmetro. O T1 declara 425 km no ciclo chinês CLTC, o que deve equivaler a algo perto de 295 km na etiqueta brasileira. O preço do T1 ainda não foi anunciado pela BAIC.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- FAQ Item 3 (Ideia 3 do usuário) -->
+          <article class="faq-item">
+            <button type="button" class="faq-item__trigger" aria-expanded="false">
+              <span class="faq-item__num">03</span>
+              <span class="faq-item__question">Qual é a autonomia do Arcfox T1?</span>
+              <span class="faq-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12h14" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-item__panel">
+              <div class="faq-item__content">
+                <p>
+                  Os dados preliminares da Arcfox indicam até 425 km para o T1 no ciclo CLTC, o padrão de medição chinês. No Brasil vale a etiqueta do Inmetro, que usa critério mais rigoroso e costuma ficar cerca de 30% abaixo do CLTC. Pelo mesmo desconto, a expectativa é de algo perto de 295 km para o T1. A BAIC ainda não o homologou no Inmetro e em breve divulgará os números oficiais.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- FAQ Item 4 (Extra relevante: Recarga Rápida) -->
+          <article class="faq-item">
+            <button type="button" class="faq-item__trigger" aria-expanded="false">
+              <span class="faq-item__num">04</span>
+              <span class="faq-item__question">Quanto tempo leva a recarga rápida do Arcfox T1?</span>
+              <span class="faq-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12h14" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-item__panel">
+              <div class="faq-item__content">
+                <p>
+                  Em eletropostos de corrente contínua (DC), o ARCFOX T1 suporta potência de recarga ultrarrápida, permitindo recuperar de 30% a 80% da Bateria Aurora em apenas 16 minutos — quase metade do tempo exigido pelos principais rivais da categoria. Para uso residencial ou em shopping centers, também conta com recarga em corrente alternada (AC) de fácil conexão.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- FAQ Item 5 (Extra relevante: Espaço Interno e Porta-Malas) -->
+          <article class="faq-item">
+            <button type="button" class="faq-item__trigger" aria-expanded="false">
+              <span class="faq-item__num">05</span>
+              <span class="faq-item__question">Qual o espaço interno e a capacidade do porta-malas do Arcfox T1?</span>
+              <span class="faq-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12h14" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-item__panel">
+              <div class="faq-item__content">
+                <p>
+                  Graças à arquitetura 100% elétrica com assoalho plano, o ARCFOX T1 entrega 2.770 mm de entre-eixos (líder da categoria) dentro de uma carroceria ágil de 4.337 mm. O porta-malas oferece 459 litros de capacidade — superando concorrentes diretos — e chega a até 1.352 litros com os bancos traseiros rebatidos, além de permitir reclinar os bancos dianteiros para formar um lounge de descanso.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- FAQ Item 6 (Extra relevante: Tecnologias de Condução e Manobra) -->
+          <article class="faq-item">
+            <button type="button" class="faq-item__trigger" aria-expanded="false">
+              <span class="faq-item__num">06</span>
+              <span class="faq-item__question">Quais tecnologias de direção e estacionamento equipam o Arcfox T1?</span>
+              <span class="faq-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12h14" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-item__panel">
+              <div class="faq-item__content">
+                <p>
+                  O modelo conta com Assistência Inteligente de Condução Nível 2 (ADAS) com 12 funções ativas, visão panorâmica 540° Surround View (360° ao redor + 180° de chassi transparente), Estacionamento Autônomo para 58 cenários de vagas, Controle Remoto via Smartphone e cockpit digital duplo com Central Multimídia de 15,6" integrada ao cluster de 8,8".
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 11: SEÇÃO FINAL DE CONVERSÃO — CARRO 3D LATERAL DE FRENTE + FORMULÁRIO ESTILIZADO
+         ========================================== -->
+    <section class="lead-closing-sec" id="agendamento" aria-labelledby="closingTitle">
+      <div class="lead-closing-sec__container">
+        <div class="lead-closing-grid">
+
+          <!-- Left Column: 3D Car Positioned Front-Side Lateral + Interactive Color Selector -->
+          <div class="lead-closing__visual">
+            <div class="lead-closing__badge-row">
+              <span class="lead-closing__kicker">BAIC V12 • RESERVA DE TEST DRIVE</span>
+              <span class="lead-closing__arrival-pill">Chegada: Novembro 2026</span>
+            </div>
+
+            <h2 class="lead-closing__headline" id="closingTitle">
+              Seja um dos primeiros a dirigir o <span>ARCFOX T1.</span>
+            </h2>
+
+            <p class="lead-closing__lead">
+              Cadastre seu interesse ao lado para garantir atendimento prioritário na concessionária <strong>BAIC V12</strong> e agendar sua experiência ao volante.
+            </p>
+
+            <!-- 3D Car Showcase Stage (3/4 Front-Side Angle) -->
+            <div class="lead-closing__car-stage">
+              <div class="lead-closing__car-glow" aria-hidden="true"></div>
+              <span class="lead-closing__watermark" aria-hidden="true">T1 BEV</span>
+
+              <img
+                src="https://inconnectsites.s3.us-east-1.amazonaws.com/assets/cars/baic/t1/360/blue-22.webp"
+                alt="ARCFOX T1 3D posicionado de lado de frente"
+                class="lead-closing__car-img"
+                id="closingCarImg"
+                loading="lazy"
+                draggable="false"
+              />
+
+              <div class="lead-closing__pedestal" aria-hidden="true"></div>
+            </div>
+
+            <!-- Interactive Color Swatches for the 3D Car in the Closing Section -->
+            <div class="lead-closing__color-bar" role="group" aria-label="Escolha a cor do ARCFOX T1">
+              <div class="lead-closing__color-meta">
+                <span class="lead-closing__color-label">Cor selecionada:</span>
+                <strong class="lead-closing__color-name" id="closingColorName">Azul Atlântico</strong>
+              </div>
+
+              <div class="lead-closing__swatches">
+                <button
+                  type="button"
+                  class="lead-closing__swatch is-active"
+                  data-closing-color="blue"
+                  data-closing-color-name="Azul Atlântico"
+                  data-closing-src="https://inconnectsites.s3.us-east-1.amazonaws.com/assets/cars/baic/t1/360/blue-22.webp"
+                  aria-label="Azul Atlântico"
+                  style="--swatch-bg: linear-gradient(145deg, #2563eb 0%, #0f296b 100%);"
+                ></button>
+                <button
+                  type="button"
+                  class="lead-closing__swatch"
+                  data-closing-color="white"
+                  data-closing-color-name="Branco Polar"
+                  data-closing-src="https://inconnectsites.s3.us-east-1.amazonaws.com/assets/cars/baic/t1/360/white-22.webp"
+                  aria-label="Branco Polar"
+                  style="--swatch-bg: linear-gradient(145deg, #ffffff 0%, #cbd5e1 100%);"
+                ></button>
+                <button
+                  type="button"
+                  class="lead-closing__swatch"
+                  data-closing-color="gray"
+                  data-closing-color-name="Cinza Titânio"
+                  data-closing-src="https://inconnectsites.s3.us-east-1.amazonaws.com/assets/cars/baic/t1/360/gray-22.webp"
+                  aria-label="Cinza Titânio"
+                  style="--swatch-bg: linear-gradient(145deg, #64748b 0%, #334155 100%);"
+                ></button>
+                <button
+                  type="button"
+                  class="lead-closing__swatch"
+                  data-closing-color="silver"
+                  data-closing-color-name="Prata Aurora"
+                  data-closing-src="https://inconnectsites.s3.us-east-1.amazonaws.com/assets/cars/baic/t1/360/green-22.webp"
+                  aria-label="Prata Aurora"
+                  style="--swatch-bg: linear-gradient(145deg, #e2e6eb 0%, #b4bcc6 100%);"
+                ></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Styled Lead & Test Drive Form Card -->
+          <div class="lead-closing__form-card">
+            <div class="lead-closing__form-header">
+              <span class="lead-closing__form-tag">ATENDIMENTO EXCLUSIVO BAIC V12</span>
+              <h3 class="lead-closing__form-title">Agende seu Test Drive</h3>
+              <p class="lead-closing__form-desc">
+                Preencha seus dados abaixo para receber novidades em primeira mão e agendar sua visita com um especialista.
+              </p>
+            </div>
+
+            <form class="lead-closing__form" id="closingLeadForm">
+              <div class="lead-field">
+                <label for="closingName">Nome completo</label>
+                <input
+                  type="text"
+                  id="closingName"
+                  name="name"
+                  placeholder="Digite seu nome completo"
+                  required
+                />
+              </div>
+
+              <div class="lead-field-row">
+                <div class="lead-field">
+                  <label for="closingPhone">WhatsApp / Telefone</label>
+                  <input
+                    type="tel"
+                    id="closingPhone"
+                    name="phone"
+                    placeholder="(00) 00000-0000"
+                    required
+                  />
+                </div>
+
+                <div class="lead-field">
+                  <label for="closingEmail">E-mail</label>
+                  <input
+                    type="email"
+                    id="closingEmail"
+                    name="email"
+                    placeholder="voce@email.com"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="lead-field">
+                <label for="closingColorSelect">Cor de preferência</label>
+                <select id="closingColorSelect" name="color">
+                  <option value="Azul Atlântico" selected>Azul Atlântico</option>
+                  <option value="Branco Polar">Branco Polar</option>
+                  <option value="Cinza Titânio">Cinza Titânio</option>
+                  <option value="Prata Aurora">Prata Aurora</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn-framer btn-framer--full lead-closing__submit" id="closingSubmitBtn">
+                <span class="btn-framer__label">Solicitar Contato e Test Drive</span>
+                <span class="btn-framer__badge" aria-hidden="true">
+                  <svg class="btn-framer__arrow btn-framer__arrow--primary" viewBox="0 0 16 16" fill="none">
+                    <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <svg class="btn-framer__arrow btn-framer__arrow--secondary" viewBox="0 0 16 16" fill="none">
+                    <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </button>
+
+              <p class="lead-closing__privacy">
+                Seus dados estão protegidos e serão utilizados exclusivamente pela equipe BAIC V12 para o seu atendimento.
+              </p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       SITE FOOTER (BAIC V12 contatos à esquerda • Assinatura Casa Porte com marca d'água à direita)
+       Fidelidade 100% à referência visual: fundo #000000, minimalismo puro, sem caixas decorativas
+       ========================================== -->
+  <footer class="site-footer" id="rodape" aria-label="Rodapé">
+    <div class="site-footer__container">
+      <div class="site-footer__top">
+
+        <!-- Left Column: BAIC V12 brand + institutional text + direct outline contacts -->
+        <div class="site-footer__brand-col">
+          <a href="#hero" class="site-footer__brand-link" aria-label="BAIC V12 — voltar ao início">
+            <img src="assets/logo-baic.png" alt="BAIC | V12" class="site-footer__baic-logo" loading="lazy" />
+          </a>
+          <p class="site-footer__tagline">
+            Concessionária oficial BAIC em Brasília. Venha conhecer o novo<br class="site-footer__br-desktop" />ARCFOX T1.
+          </p>
+
+          <ul class="site-footer__contacts">
+            <li>
+              <a href="https://www.instagram.com/baicv12?utm_source=ig_web_button_share_sheet&xtok=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="site-footer__contact" aria-label="Instagram @baicv12">
+                <span class="site-footer__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <circle cx="12" cy="12" r="4.2"/>
+                    <circle cx="17.8" cy="6.2" r="1.1" fill="currentColor" stroke="none"/>
+                  </svg>
+                </span>
+                <span class="site-footer__contact-text">@baicv12</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+5561927400099" class="site-footer__contact" aria-label="Telefone (61) 92740-0099">
+                <span class="site-footer__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                  </svg>
+                </span>
+                <span class="site-footer__contact-text">(61) 92740-0099</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.google.com/maps/search/?api=1&query=BAIC+V12+SIA+Trecho+1+Bras%C3%ADlia" target="_blank" rel="noopener noreferrer" class="site-footer__contact" aria-label="Endereço SIA Trecho 1 / Aeroporto — Brasília, DF">
+                <span class="site-footer__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </span>
+                <span class="site-footer__contact-text">SIA Trecho 1 / Aeroporto — Brasília, DF</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Column: Giant BAIC Watermark + Casa Porte Agency Lockup -->
+        <div class="site-footer__agency-col">
+          <div class="site-footer__watermark-wrap" aria-hidden="true">
+            <img src="assets/baic-watermark.png" alt="" class="site-footer__baic-watermark" loading="lazy" />
+          </div>
+
+          <a
+            href="https://www.instagram.com/casaporte.design?utm_source=ig_web_button_share_sheet&vrfl=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            rel="noopener noreferrer"
+            class="site-footer__casaporte-lockup"
+            aria-label="Site desenvolvido por Casa Porte — Design, Branding & Digital Marketing"
+          >
+            <span class="casaporte-lockup__kicker">SITE DESENVOLVIDO POR:</span>
+            <img src="assets/logo-casa-porte.png" alt="CASA PORTE" class="casaporte-lockup__logo" loading="lazy" />
+            <span class="casaporte-lockup__tagline">DESIGN, BRANDING &amp; <span class="casaporte-lockup__tagline-accent">DIGITAL MARKETING</span></span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Horizontal Divider Line -->
+      <div class="site-footer__divider" role="separator" aria-hidden="true"></div>
+
+      <!-- Bottom Bar -->
+      <div class="site-footer__bottom">
+        <span class="site-footer__copyright">© 2026 BAIC V12 • ARCFOX T1 — Todos os direitos reservados.</span>
+        <span class="site-footer__legal">Imagens meramente ilustrativas. Especificações sujeitas a alteração sem aviso prévio.</span>
+        <span class="site-footer__credits-inline">
+          <span class="site-footer__pipe" aria-hidden="true">|</span>
+          Desenvolvido por <a href="https://www.instagram.com/casaporte.design?utm_source=ig_web_button_share_sheet&vrfl=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="site-footer__dev-link"><strong>Casa Porte</strong></a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       EXPANDED GALLERY VIEWER (LIGHTBOX WITH THUMBNAIL STRIP & SIDE ARROWS)
+       ========================================== -->
+  <div class="bento-lb" id="bentoLightbox" aria-hidden="true" role="dialog" aria-label="Visualizador de Fotos da Galeria">
+    <div class="bento-lb__backdrop" data-close-bento-lb></div>
+
+    <div class="bento-lb__container">
+      <!-- Top Bar: Counter + Active Photo Info + Close "X" Button -->
+      <div class="bento-lb__topbar">
+        <div class="bento-lb__meta">
+          <span class="bento-lb__counter" id="bentoLbCounter">01 / 13</span>
+          <span class="bento-lb__divider" aria-hidden="true">•</span>
+          <span class="bento-lb__tag" id="bentoLbTag">Exterior • Lifestyle</span>
+          <h3 class="bento-lb__title" id="bentoLbTitle">Presença Urbana Sofisticada</h3>
+        </div>
+
+        <button type="button" class="bento-lb__close" id="bentoLbCloseBtn" data-close-bento-lb aria-label="Fechar galeria expandida">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 6L6 18M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Main Expanded Photo Stage + Left/Right Side Navigation Arrows -->
+      <div class="bento-lb__stage">
+        <button type="button" class="bento-lb__arrow bento-lb__arrow--prev" id="bentoLbPrev" aria-label="Foto anterior">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <div class="bento-lb__viewport">
+          <img
+            src="assets/gallery/gal-10.jpg"
+            alt="Foto ampliada da galeria ARCFOX T1"
+            class="bento-lb__main-img"
+            id="bentoLbMainImg"
+          />
+        </div>
+
+        <button type="button" class="bento-lb__arrow bento-lb__arrow--next" id="bentoLbNext" aria-label="Próxima foto">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 18l6-6-6-6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Bottom Thumbnail Filmstrip (All 13 Gallery Photos to Click & Navigate Easily) -->
+      <div class="bento-lb__bottom">
+        <div class="bento-lb__thumbs" id="bentoLbThumbStrip" role="tablist" aria-label="Miniaturas da galeria">
+          <!-- Populated / synced with all 13 gallery items -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       CLEAN MINIMAL TEST DRIVE MODAL
+       ========================================== -->
+  <div class="modal" id="testDriveModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__dialog">
+      <button type="button" class="modal__close" data-close-modal aria-label="Fechar janela">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M18 6L6 18M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+      <div class="modal__header">
+        <span class="modal__tag">BAIC V12 • Experiência Exclusiva</span>
+        <h2 class="modal__title" id="modalTitle">
+          Agendar Test Drive — <span>ARCFOX T1</span>
+        </h2>
+        <p class="modal__desc" id="modalColorNote">
+          Preencha seus dados para agendar sua visita e conhecer de perto o novo conceito de mobilidade elétrica.
+        </p>
+      </div>
+
+      <form class="modal__form" id="testDriveForm">
+        <div class="form-group">
+          <label for="leadName">Nome completo</label>
+          <input type="text" id="leadName" name="name" placeholder="Seu nome" required />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="leadPhone">WhatsApp</label>
+            <input type="tel" id="leadPhone" name="phone" placeholder="(00) 00000-0000" required />
+          </div>
+          <div class="form-group">
+            <label for="leadEmail">E-mail</label>
+            <input type="email" id="leadEmail" name="email" placeholder="voce@email.com" required />
+          </div>
+        </div>
+
+        <button type="submit" class="btn-framer btn-framer--full">
+          <span class="btn-framer__label">Confirmar Agendamento</span>
+          <span class="btn-framer__badge" aria-hidden="true">
+            <svg class="btn-framer__arrow btn-framer__arrow--primary" viewBox="0 0 16 16" fill="none">
+              <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg class="btn-framer__arrow btn-framer__arrow--secondary" viewBox="0 0 16 16" fill="none">
+              <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js?v=26"></script>
+</body>
+</html>
